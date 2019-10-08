@@ -85,7 +85,7 @@ void MarchingTetrahedra::process() {
 
     float iso = isoValue_.get();
 
-    util::IndexMapper3D index(dims);
+    util::IndexMapper3D indexMapper(dims);
 
     const static size_t tetrahedraIds[6][4] = {{0, 1, 2, 5}, {1, 3, 2, 5}, {3, 2, 5, 7},
                                                {0, 2, 4, 5}, {6, 4, 2, 5}, {6, 7, 5, 2}};
@@ -107,15 +107,17 @@ void MarchingTetrahedra::process() {
 						for (int x = 0; x < CELL_SIZE; x++) {
 							// index
 							int index = (z * CELL_SIZE * CELL_SIZE) + (y * CELL_SIZE) + x;
-							c.voxels[index].index = index;
-
-							// positions
-							c.voxels[index].pos.x = (pos.x + x) / dims.x;
-							c.voxels[index].pos.y = (pos.y + y) / dims.y;
-							c.voxels[index].pos.z = (pos.z + z) / dims.z;
 
 							// value for voxel
 							size3_t query_pos{ pos.x + x, pos.y + y, pos.z + z };
+
+							// positions
+							c.voxels[index].pos.x = (pos.x + x) / (dims.x - 1.0);
+							c.voxels[index].pos.y = (pos.y + y) / (dims.y - 1.0);
+							c.voxels[index].pos.z = (pos.z + z) / (dims.z - 1.0);
+
+							c.voxels[index].index = indexMapper(query_pos);
+
 							c.voxels[index].value = volume->getAsDouble(query_pos);
 						}
 					}
@@ -124,9 +126,9 @@ void MarchingTetrahedra::process() {
                 // Step 2: Subdivide cell into tetrahedra (hint: use tetrahedraIds)
                 std::vector<Tetrahedra> tetrahedras;
 
-				for (int i = 0; i < 6; ++i) {
+				for (size_t i = 0; i < 6; ++i) {
 					Tetrahedra t;
-					for (int j = 0; j < 4; ++j) {
+					for (size_t j = 0; j < 4; ++j) {
 						t.voxels[j] = c.voxels[tetrahedraIds[i][j]];
 					}
 					tetrahedras.push_back(t);
@@ -150,6 +152,9 @@ void MarchingTetrahedra::process() {
 					if (v3.value < iso)
 						caseId += 8;
 
+					vec3 interp0, interp1, interp2, interp3;
+
+					uint32_t i0, i1, i2, i3;
 
                     // step four: Extract triangles
 					switch (caseId) {
@@ -157,13 +162,13 @@ void MarchingTetrahedra::process() {
 							break;
 						case 1: case 14: {
 							// interpolation: where are we on the edge? interp_pos = origin + direction * iso_distance = origin + (end - origin) * (iso - origin.iso) / (end.iso - origin.iso)
-							vec3 interp0 = v0.pos + (v1.pos - v0.pos) * ((iso - v0.value) / (v1.value - v0.value)); // 0-1
-							vec3 interp1 = v0.pos + (v2.pos - v0.pos) * ((iso - v0.value) / (v2.value - v0.value)); // 0-2
-							vec3 interp2 = v0.pos + (v3.pos - v0.pos) * ((iso - v0.value) / (v3.value - v0.value)); // 0-3
+							interp0 = v0.pos + (v1.pos - v0.pos) * ((iso - v0.value) / (v1.value - v0.value)); // 0-1
+							interp1 = v0.pos + (v2.pos - v0.pos) * ((iso - v0.value) / (v2.value - v0.value)); // 0-2
+							interp2 = v0.pos + (v3.pos - v0.pos) * ((iso - v0.value) / (v3.value - v0.value)); // 0-3
 
-							uint32_t i0 = mesh.addVertex(interp0, v0.index, v1.index);
-							uint32_t i1 = mesh.addVertex(interp1, v0.index, v2.index);
-							uint32_t i2 = mesh.addVertex(interp2, v0.index, v3.index);
+							i0 = mesh.addVertex(interp0, v0.index, v1.index);
+							i1 = mesh.addVertex(interp1, v0.index, v2.index);
+							i2 = mesh.addVertex(interp2, v0.index, v3.index);
 
 							if (caseId == 1) {
 								mesh.addTriangle(i0, i2, i1);
@@ -171,56 +176,63 @@ void MarchingTetrahedra::process() {
 							else {
 								mesh.addTriangle(i0, i1, i2);
 							}
+							break;
 						}
 						case 2: case 13: {
 							// interpolation: where are we on the edge? interp_pos = origin + direction * iso_distance = origin + (end - origin) * (iso - origin.iso) / (end.iso - origin.iso)
-							vec3 interp0 = v1.pos + (v0.pos - v1.pos) * ((iso - v1.value) / (v0.value - v1.value)); //1-0
-							vec3 interp1 = v1.pos + (v2.pos - v1.pos) * ((iso - v1.value) / (v2.value - v1.value)); //1-2
-							vec3 interp2 = v1.pos + (v3.pos - v1.pos) * ((iso - v1.value) / (v3.value - v1.value)); //1-3 
+							interp0 = v1.pos + (v0.pos - v1.pos) * ((iso - v1.value) / (v0.value - v1.value)); //1-0
+							interp1 = v1.pos + (v2.pos - v1.pos) * ((iso - v1.value) / (v2.value - v1.value)); //1-2
+							interp2 = v1.pos + (v3.pos - v1.pos) * ((iso - v1.value) / (v3.value - v1.value)); //1-3 
 
-							uint32_t i0 = mesh.addVertex(interp0, v1.index, v0.index);
-							uint32_t i1 = mesh.addVertex(interp1, v1.index, v2.index);
-							uint32_t i2 = mesh.addVertex(interp2, v1.index, v3.index);
+							i0 = mesh.addVertex(interp0, v1.index, v0.index);
+							i1 = mesh.addVertex(interp1, v1.index, v2.index);
+							i2 = mesh.addVertex(interp2, v1.index, v3.index);
 
 							if (caseId == 2) {
-								mesh.addTriangle(i0, i2, i1);
-							}
-							else {
 								mesh.addTriangle(i0, i1, i2);
 							}
+							else {
+								mesh.addTriangle(i0, i2, i1);
+							}
+							break;
 
 						}
 						case 3: case 12: {
 							// interpolation: where are we on the edge? interp_pos = origin + direction * iso_distance = origin + (end - origin) * (iso - origin.iso) / (end.iso - origin.iso)
-							vec3 interp0 = v0.pos + (v2.pos - v0.pos) * ((iso - v0.value) / (v2.value - v0.value)); //0-2
-							vec3 interp1 = v0.pos + (v3.pos - v0.pos) * ((iso - v0.value) / (v3.value - v0.value)); //0-3
-							vec3 interp2 = v1.pos + (v2.pos - v1.pos) * ((iso - v1.value) / (v2.value - v1.value)); //1-2
-							vec3 interp3 = v1.pos + (v3.pos - v1.pos) * ((iso - v1.value) / (v3.value - v1.value)); //1-3 
+							interp0 = v0.pos + (v2.pos - v0.pos) * ((iso - v0.value) / (v2.value - v0.value)); //0-2
+							interp1 = v0.pos + (v3.pos - v0.pos) * ((iso - v0.value) / (v3.value - v0.value)); //0-3
+							interp2 = v1.pos + (v2.pos - v1.pos) * ((iso - v1.value) / (v2.value - v1.value)); //1-2
+							interp3 = v1.pos + (v3.pos - v1.pos) * ((iso - v1.value) / (v3.value - v1.value)); //1-3 
 
-							uint32_t i0 = mesh.addVertex(interp0, v0.index, v2.index);
-							uint32_t i1 = mesh.addVertex(interp1, v0.index, v3.index);
-							uint32_t i2 = mesh.addVertex(interp2, v1.index, v2.index);
-							uint32_t i3 = mesh.addVertex(interp3, v1.index, v3.index);
+							i0 = mesh.addVertex(interp0, v0.index, v2.index);
+							i1 = mesh.addVertex(interp1, v0.index, v3.index);
+							i2 = mesh.addVertex(interp2, v1.index, v2.index);
+							i3 = mesh.addVertex(interp3, v1.index, v3.index);
 
 							if (caseId == 3) {
-								mesh.addTriangle(i0, i3, i2);
+								// left triangle
+								mesh.addTriangle(i1, i2, i3);
+								// right triangle
 								mesh.addTriangle(i0, i2, i1);
 							}
 							else {
-								mesh.addTriangle(i0, i1, i2);
-								mesh.addTriangle(i0, i2, i3);
+								// left triangle
+								mesh.addTriangle(i1, i3, i2);
+								// right triangle
+								mesh.addTriangle(i0, i1, i2);	
 							}
+							break;
 
 						}
 						case 4: case 11: {
 							// interpolation: where are we on the edge? interp_pos = origin + direction * iso_distance = origin + (end - origin) * (iso - origin.iso) / (end.iso - origin.iso)
-							vec3 interp0 = v2.pos + (v0.pos - v2.pos) * ((iso - v2.value) / (v0.value - v2.value)); //2-0
-							vec3 interp1 = v2.pos + (v2.pos - v2.pos) * ((iso - v2.value) / (v2.value - v2.value)); //2-1
-							vec3 interp2 = v2.pos + (v3.pos - v2.pos) * ((iso - v2.value) / (v3.value - v2.value)); //2-3 
+							interp0 = v2.pos + (v0.pos - v2.pos) * ((iso - v2.value) / (v0.value - v2.value)); //2-0
+							interp1 = v2.pos + (v1.pos - v2.pos) * ((iso - v2.value) / (v1.value - v2.value)); //2-1
+							interp2 = v2.pos + (v3.pos - v2.pos) * ((iso - v2.value) / (v3.value - v2.value)); //2-3 
 
-							uint32_t i0 = mesh.addVertex(interp0, v2.index, v0.index);
-							uint32_t i1 = mesh.addVertex(interp1, v2.index, v1.index);
-							uint32_t i2 = mesh.addVertex(interp2, v2.index, v3.index);
+							i0 = mesh.addVertex(interp0, v2.index, v0.index);
+							i1 = mesh.addVertex(interp1, v2.index, v1.index);
+							i2 = mesh.addVertex(interp2, v2.index, v3.index);
 
 							if (caseId == 4) {
 								mesh.addTriangle(i0, i2, i1);
@@ -228,61 +240,72 @@ void MarchingTetrahedra::process() {
 							else {
 								mesh.addTriangle(i0, i1, i2);
 							}
+							break;
 
 						}
 						case 5: case 10: {
 							// interpolation: where are we on the edge? interp_pos = origin + direction * iso_distance = origin + (end - origin) * (iso - origin.iso) / (end.iso - origin.iso)
-							vec3 interp0 = v0.pos + (v1.pos - v0.pos) * ((iso - v0.value) / (v2.value - v0.value)); //0-1
-							vec3 interp1 = v0.pos + (v3.pos - v0.pos) * ((iso - v0.value) / (v3.value - v0.value)); //0-3
-							vec3 interp2 = v2.pos + (v1.pos - v2.pos) * ((iso - v2.value) / (v1.value - v2.value)); //2-1
-							vec3 interp3 = v2.pos + (v3.pos - v2.pos) * ((iso - v2.value) / (v3.value - v2.value)); //2-3 
+							interp0 = v0.pos + (v1.pos - v0.pos) * ((iso - v0.value) / (v1.value - v0.value)); //0-1
+							interp1 = v0.pos + (v3.pos - v0.pos) * ((iso - v0.value) / (v3.value - v0.value)); //0-3
+							interp2 = v2.pos + (v1.pos - v2.pos) * ((iso - v2.value) / (v1.value - v2.value)); //2-1
+							interp3 = v2.pos + (v3.pos - v2.pos) * ((iso - v2.value) / (v3.value - v2.value)); //2-3 
 
-							uint32_t i0 = mesh.addVertex(interp0, v0.index, v1.index);
-							uint32_t i1 = mesh.addVertex(interp1, v0.index, v3.index);
-							uint32_t i2 = mesh.addVertex(interp2, v2.index, v1.index);
-							uint32_t i3 = mesh.addVertex(interp3, v2.index, v3.index);
+							i0 = mesh.addVertex(interp0, v0.index, v1.index);
+							i1 = mesh.addVertex(interp1, v0.index, v3.index);
+							i2 = mesh.addVertex(interp2, v2.index, v1.index);
+							i3 = mesh.addVertex(interp3, v2.index, v3.index);
 
 							if (caseId == 5) {
-								mesh.addTriangle(i0, i3, i2);
-								mesh.addTriangle(i0, i2, i1);
+								// left triangle
+								mesh.addTriangle(i0, i1, i2);
+								// right triangle
+								mesh.addTriangle(i1, i3, i2);
 							}
 							else {
-								mesh.addTriangle(i0, i1, i2);
-								mesh.addTriangle(i0, i2, i3);
+								// left triangle
+								mesh.addTriangle(i0, i2, i1);
+								// right triangle
+								mesh.addTriangle(i1, i2, i3);
 							}
+							break;
 
 						}
 						case 6: case 9: {
 							// interpolation: where are we on the edge? interp_pos = origin + direction * iso_distance = origin + (end - origin) * (iso - origin.iso) / (end.iso - origin.iso)
-							vec3 interp0 = v0.pos + (v1.pos - v0.pos) * ((iso - v0.value) / (v1.value - v0.value)); //0-1
-							vec3 interp1 = v0.pos + (v2.pos - v0.pos) * ((iso - v0.value) / (v2.value - v0.value)); //0-2
-							vec3 interp2 = v1.pos + (v3.pos - v1.pos) * ((iso - v1.value) / (v3.value - v1.value)); //1-3
-							vec3 interp3 = v2.pos + (v3.pos - v2.pos) * ((iso - v2.value) / (v3.value - v2.value)); //2-3 
+							interp0 = v1.pos + (v0.pos - v1.pos) * ((iso - v1.value) / (v0.value - v1.value)); //1-0
+							interp1 = v1.pos + (v3.pos - v1.pos) * ((iso - v1.value) / (v3.value - v1.value)); //1-3
+							interp2 = v2.pos + (v0.pos - v2.pos) * ((iso - v2.value) / (v0.value - v2.value)); //2-0
+							interp3 = v2.pos + (v3.pos - v2.pos) * ((iso - v2.value) / (v3.value - v2.value)); //2-3 
 
-							uint32_t i0 = mesh.addVertex(interp0, v0.index, v1.index);
-							uint32_t i1 = mesh.addVertex(interp1, v0.index, v2.index);
-							uint32_t i2 = mesh.addVertex(interp2, v1.index, v3.index);
-							uint32_t i3 = mesh.addVertex(interp3, v2.index, v3.index);
+							i0 = mesh.addVertex(interp0, v1.index, v0.index);
+							i1 = mesh.addVertex(interp1, v1.index, v3.index);
+							i2 = mesh.addVertex(interp2, v2.index, v0.index);
+							i3 = mesh.addVertex(interp3, v2.index, v3.index);
 
 							if (caseId == 5) {
-								mesh.addTriangle(i0, i3, i2);
+								// left triangle
 								mesh.addTriangle(i0, i2, i1);
+								// right triangle
+								mesh.addTriangle(i2, i3, i1);
 							}
 							else {
+								// left triangle
 								mesh.addTriangle(i0, i1, i2);
-								mesh.addTriangle(i0, i2, i3);
+								// right triangle
+								mesh.addTriangle(i2, i1, i3);
 							}
+							break;
 
 						}
 						case 7: case 8: {
 							// interpolation: where are we on the edge? interp_pos = origin + direction * iso_distance = origin + (end - origin) * (iso - origin.iso) / (end.iso - origin.iso)
-							vec3 interp0 = v3.pos + (v0.pos - v3.pos) * ((iso - v3.value) / (v0.value - v3.value)); //3-0
-							vec3 interp1 = v3.pos + (v1.pos - v3.pos) * ((iso - v3.value) / (v1.value - v3.value)); //3-1
-							vec3 interp2 = v3.pos + (v2.pos - v3.pos) * ((iso - v3.value) / (v2.value - v3.value)); //3-2 
+							interp0 = v0.pos + (v3.pos - v0.pos) * ((iso - v0.value) / (v3.value - v0.value)); //0-3
+							interp1 = v1.pos + (v3.pos - v1.pos) * ((iso - v1.value) / (v3.value - v1.value)); //1-3
+							interp2 = v2.pos + (v3.pos - v2.pos) * ((iso - v2.value) / (v3.value - v2.value)); //2-3 
 
-							uint32_t i0 = mesh.addVertex(interp0, v3.index, v0.index);
-							uint32_t i1 = mesh.addVertex(interp1, v3.index, v1.index);
-							uint32_t i2 = mesh.addVertex(interp2, v3.index, v2.index);
+							i0 = mesh.addVertex(interp0, v0.index, v3.index);
+							i1 = mesh.addVertex(interp1, v1.index, v3.index);
+							i2 = mesh.addVertex(interp2, v2.index, v3.index);
 
 							if (caseId == 7) {
 								mesh.addTriangle(i0, i2, i1);
@@ -290,7 +313,7 @@ void MarchingTetrahedra::process() {
 							else {
 								mesh.addTriangle(i0, i1, i2);
 							}
-
+							break;
 						}
 					}
 
@@ -310,7 +333,6 @@ MarchingTetrahedra::MeshHelper::MeshHelper(std::shared_ptr<const Volume> vol)
     mesh_->setModelMatrix(vol->getModelMatrix());
     mesh_->setWorldMatrix(vol->getWorldMatrix());
 }
-
 
 void MarchingTetrahedra::MeshHelper::addTriangle(size_t i0, size_t i1, size_t i2) {
     ivwAssert(i0 != i1, "i0 and i1 should not be the same value");

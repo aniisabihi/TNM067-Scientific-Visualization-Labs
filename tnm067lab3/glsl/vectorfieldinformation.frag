@@ -40,19 +40,46 @@ float passThrough(vec2 coord){
 
 float magnitude( vec2 coord ){
     //TODO find the magnitude of the vectorfield at the position coords
-    return 0.0;
+
+	vec2 velo = texture(vfColor,coord).xy;
+
+	return length(velo); // does not need to be changed for vec3
+
+
+   // return abs(sqrt((velo.x * velo.x) + (velo.y * velo.y)));
+   // return 0;
+}
+
+vec2 derivate_x(vec2 coord, float delta_x) {
+	vec2 velo_pos = texture(vfColor, coord + vec2(delta_x, 0)).xy;
+	vec2 velo_neg = texture(vfColor, coord - vec2(delta_x, 0)).xy;
+
+	return (velo_pos - velo_neg) / (2 * delta_x);
+}
+
+vec2 derivate_y(vec2 coord, float delta_y) {
+	vec2 velo_pos = texture(vfColor, coord + vec2(0, delta_y)).xy;
+	vec2 velo_neg = texture(vfColor, coord - vec2(0, delta_y)).xy;
+
+	return (velo_pos - velo_neg) / (2 * delta_y);
 }
 
 float divergence(vec2 coord){
     //TODO find the divergence of the vectorfield at the position coords
 	vec2 pixelSize = vfParameters.reciprocalDimensions;
-    return 0.0;
+	vec2 dVdx = derivate_x(coord, pixelSize.x);
+	vec2 dVdy = derivate_y(coord, pixelSize.y);
+	
+    return dVdx.x + dVdy.y;
 }
 
 float rotation(vec2 coord){
     //TODO find the curl of the vectorfield at the position coords
     vec2 pixelSize = vfParameters.reciprocalDimensions;
-    return 0.0;
+	vec2 dVdx = derivate_x(coord, pixelSize.x);
+	vec2 dVdy = derivate_y(coord, pixelSize.y);
+
+    return dVdx.y - dVdy.x;
 }
 
 

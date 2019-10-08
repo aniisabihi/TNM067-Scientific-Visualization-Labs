@@ -37,6 +37,13 @@ mat2 jacobian(const ImageSampler &sampler, vec2 position, vec2 offset) {
     vec2 ox(offset.x,0);
     vec2 oy(0,offset.y);
     mat2 J; // TODO: Calculate the Jacobian J
+
+	vec2 dVdx = (sampler.sample(position + ox) - sampler.sample(position - ox));
+	vec2 dVdy = (sampler.sample(position + oy) - sampler.sample(position - oy));
+	dVdx /= 2 * offset.x;
+	dVdy /= 2 * offset.y;
+
+	J = mat2(dVdx, dVdy);
     return J;
 }
 

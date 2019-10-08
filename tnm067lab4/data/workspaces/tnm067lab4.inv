@@ -2,13 +2,66 @@
 <InviwoWorkspace version="2">
     <InviwoSetup>
         <Modules>
-            <Module name="Core" version="0" />
+            <Module name="Core" version="0">
+                <Processors>
+                    <Processor content="org.inviwo.Image.outport.metasource" />
+                    <Processor content="org.inviwo.Image.outport.metasink" />
+                    <Processor content="org.inviwo.CompositeProcessor" />
+                    <Processor content="org.inviwo.Mesh.outport.metasink" />
+                    <Processor content="org.inviwo.Mesh.outport.metasource" />
+                    <Processor content="org.inviwo.Volume.outport.metasink" />
+                    <Processor content="org.inviwo.Volume.outport.metasource" />
+                    <Processor content="org.inviwo.Volume.shared_ptr.vector.outport.metasink" />
+                    <Processor content="org.inviwo.Volume.shared_ptr.vector.outport.metasource" />
+                    <Processor content="org.inviwo.Buffer.outport.metasink" />
+                    <Processor content="org.inviwo.Buffer.outport.metasource" />
+                    <Processor content="org.inviwo.LightSource.outport.metasink" />
+                    <Processor content="org.inviwo.LightSource.outport.metasource" />
+                    <Processor content="org.inviwo.Vec2FLOAT32.outport.metasink" />
+                    <Processor content="org.inviwo.Vec2FLOAT32.outport.metasource" />
+                    <Processor content="org.inviwo.Vec2FLOAT64.outport.metasink" />
+                    <Processor content="org.inviwo.Vec2FLOAT64.outport.metasource" />
+                    <Processor content="org.inviwo.Vec2INT32.outport.metasink" />
+                    <Processor content="org.inviwo.Vec2INT32.outport.metasource" />
+                    <Processor content="org.inviwo.Vec3FLOAT32.outport.metasink" />
+                    <Processor content="org.inviwo.Vec3FLOAT32.outport.metasource" />
+                    <Processor content="org.inviwo.Vec3FLOAT64.outport.metasink" />
+                    <Processor content="org.inviwo.Vec3FLOAT64.outport.metasource" />
+                    <Processor content="org.inviwo.Vec3INT32.outport.metasink" />
+                    <Processor content="org.inviwo.Vec3INT32.outport.metasource" />
+                    <Processor content="org.inviwo.Vec4FLOAT32.outport.metasink" />
+                    <Processor content="org.inviwo.Vec4FLOAT32.outport.metasource" />
+                    <Processor content="org.inviwo.Vec4FLOAT64.outport.metasink" />
+                    <Processor content="org.inviwo.Vec4FLOAT64.outport.metasource" />
+                    <Processor content="org.inviwo.Vec4INT32.outport.metasink" />
+                    <Processor content="org.inviwo.Vec4INT32.outport.metasource" />
+                    <Processor content="org.inviwo.Vec2FLOAT32.vector.outport.metasink" />
+                    <Processor content="org.inviwo.Vec2FLOAT32.vector.outport.metasource" />
+                    <Processor content="org.inviwo.Vec2FLOAT64.vector.outport.metasink" />
+                    <Processor content="org.inviwo.Vec2FLOAT64.vector.outport.metasource" />
+                    <Processor content="org.inviwo.Vec2INT32.vector.outport.metasink" />
+                    <Processor content="org.inviwo.Vec2INT32.vector.outport.metasource" />
+                    <Processor content="org.inviwo.Vec3FLOAT32.vector.outport.metasink" />
+                    <Processor content="org.inviwo.Vec3FLOAT32.vector.outport.metasource" />
+                    <Processor content="org.inviwo.Vec3FLOAT64.vector.outport.metasink" />
+                    <Processor content="org.inviwo.Vec3FLOAT64.vector.outport.metasource" />
+                    <Processor content="org.inviwo.Vec3INT32.vector.outport.metasink" />
+                    <Processor content="org.inviwo.Vec3INT32.vector.outport.metasource" />
+                    <Processor content="org.inviwo.Vec4FLOAT32.vector.outport.metasink" />
+                    <Processor content="org.inviwo.Vec4FLOAT32.vector.outport.metasource" />
+                    <Processor content="org.inviwo.Vec4FLOAT64.vector.outport.metasink" />
+                    <Processor content="org.inviwo.Vec4FLOAT64.vector.outport.metasource" />
+                    <Processor content="org.inviwo.Vec4INT32.vector.outport.metasink" />
+                    <Processor content="org.inviwo.Vec4INT32.vector.outport.metasource" />
+                    <Processor content="org.inviwo.CompositeProcessorCUsersemmni551inviwoinviwosrcdataworkspacescompositesVolumeRaycasterCompositeinv" />
+                </Processors>
+            </Module>
             <Module name="OpenGL" version="0">
                 <Processors>
                     <Processor content="org.inviwo.CanvasGL" />
                 </Processors>
             </Module>
-            <Module name="Base" version="2">
+            <Module name="Base" version="3">
                 <Processors>
                     <Processor content="org.inviwo.ConvexHull2DProcessor" />
                     <Processor content="org.inviwo.CubeProxyGeometry" />
@@ -18,12 +71,16 @@
                     <Processor content="org.inviwo.GeometrySource" />
                     <Processor content="org.inviwo.HeightFieldMapper" />
                     <Processor content="org.inviwo.ImageExport" />
+                    <Processor content="org.inviwo.ImageInformation" />
                     <Processor content="org.inviwo.ImageSnapshot" />
                     <Processor content="org.inviwo.ImageSource" />
                     <Processor content="org.inviwo.ImageSourceSeries" />
+                    <Processor content="org.inviwo.ImageStackVolumeSource" />
                     <Processor content="org.inviwo.LayerDistanceTransformRAM" />
                     <Processor content="org.inviwo.MeshClipping" />
                     <Processor content="org.inviwo.MeshCreator" />
+                    <Processor content="org.inviwo.MeshInformation" />
+                    <Processor content="org.inviwo.MeshMapping" />
                     <Processor content="org.inviwo.NoiseProcessor" />
                     <Processor content="org.inviwo.PixelToBufferProcessor" />
                     <Processor content="org.inviwo.Pointlightsource" />
@@ -34,6 +91,7 @@
                     <Processor content="org.inviwo.VolumeExport" />
                     <Processor content="org.inviwo.BasisTransformGeometry" />
                     <Processor content="org.inviwo.BasisTransformVolume" />
+                    <Processor content="org.inviwo.TrianglesToWireframe" />
                     <Processor content="org.inviwo.WorldTransformGeometry" />
                     <Processor content="org.inviwo.WorldTransformVolume" />
                     <Processor content="org.inviwo.VolumeSlice" />
@@ -59,12 +117,20 @@
                     <Processor content="org.inviwo.RandomMeshGenerator" />
                     <Processor content="org.inviwo.RandomSphereGenerator" />
                     <Processor content="org.inviwo.NoiseVolumeProcessor" />
+                    <Processor content="org.inviwo.BufferToMeshProcessor" />
+                    <Processor content="org.inviwo.ImageToSpatialSampler" />
+                    <Processor content="org.inviwo.CameraFrustum" />
+                    <Processor content="org.inviwo.VolumeSequenceSingleTimestepSampler" />
+                    <Processor content="org.inviwo.VolumeCreator" />
+                    <Processor content="org.inviwo.MeshConverter" />
+                    <Processor content="org.inviwo.VolumeInformation" />
+                    <Processor content="org.inviwo.TFSelector" />
                     <Processor content="org.inviwo.Volume.InputSelector" />
                     <Processor content="org.inviwo.Mesh.InputSelector" />
                     <Processor content="org.inviwo.Image.InputSelector" />
                 </Processors>
             </Module>
-            <Module name="BaseGL" version="3">
+            <Module name="BaseGL" version="4">
                 <Processors>
                     <Processor content="org.inviwo.AxisAlignedCutPlane" />
                     <Processor content="org.inviwo.Background" />
@@ -73,6 +139,7 @@
                     <Processor content="org.inviwo.DrawPoints" />
                     <Processor content="org.inviwo.EntryExitPoints" />
                     <Processor content="org.inviwo.FirstIVWProcessor" />
+                    <Processor content="org.inviwo.GeometryEntryExitPoints" />
                     <Processor content="org.inviwo.HeightFieldRenderGL" />
                     <Processor content="org.inviwo.ImageCompositeProcessorGL" />
                     <Processor content="org.inviwo.ImageLayoutGL" />
@@ -95,16 +162,20 @@
                     <Processor content="org.inviwo.VolumeSliceGL" />
                     <Processor content="org.inviwo.FindEdges" />
                     <Processor content="org.inviwo.ImageBinary" />
+                    <Processor content="org.inviwo.ImageChannelCombine" />
+                    <Processor content="org.inviwo.ImageChannelSelect" />
                     <Processor content="org.inviwo.ImageGamma" />
                     <Processor content="org.inviwo.ImageGradient" />
                     <Processor content="org.inviwo.ImageGrayscale" />
                     <Processor content="org.inviwo.ImageHighPass" />
                     <Processor content="org.inviwo.ImageInvert" />
+                    <Processor content="org.inviwo.ImageLayer" />
                     <Processor content="org.inviwo.ImageLowPass" />
                     <Processor content="org.inviwo.ImageMapping" />
                     <Processor content="org.inviwo.ImageNormalization" />
                     <Processor content="org.inviwo.ImageResample" />
                     <Processor content="org.inviwo.ImageScaling" />
+                    <Processor content="org.inviwo.SplitImage" />
                     <Processor content="org.inviwo.VectorMagnitude" />
                     <Processor content="org.inviwo.VolumeBinary" />
                     <Processor content="org.inviwo.VolumeCombiner" />
@@ -117,42 +188,79 @@
                     <Processor content="org.inviwo.VolumeShader" />
                 </Processors>
             </Module>
-            <Module name="QtWidget" version="0" />
+            <Module name="CImg" version="0" />
+            <Module name="Animation" version="0" />
+            <Module name="QtWidgets" version="0" />
+            <Module name="AnimationQt" version="0" />
             <Module name="assimp" version="0" />
             <Module name="OpenGLQt" version="0" />
-            <Module name="OpenCL" version="0" />
-            <Module name="BaseCL" version="1">
-                <Processors>
-                    <Processor content="org.inviwo.EntryExitPointsCL" />
-                    <Processor content="org.inviwo.GrayscaleCL" />
-                    <Processor content="org.inviwo.VolumeFirstHitCL" />
-                    <Processor content="org.inviwo.VolumeMaxCL" />
-                    <Processor content="org.inviwo.VolumeRaycasterCL" />
-                </Processors>
-            </Module>
             <Module name="BrushingAndLinking" version="0">
                 <Processors>
                     <Processor content="org.inviwo.BrushingAndLinkingProcessor" />
                 </Processors>
             </Module>
-            <Module name="CImg" version="0" />
+            <Module name="JSON" version="0" />
+            <Module name="DataFrame" version="0">
+                <Processors>
+                    <Processor content="org.inviwo.CSVSource" />
+                    <Processor content="org.inviwo.DataFrameSource" />
+                    <Processor content="org.inviwo.DataFrameExporter" />
+                    <Processor content="org.inviwo.ImageToDataFrame" />
+                    <Processor content="org.inviwo.SyntheticDataFrame" />
+                    <Processor content="org.inviwo.VolumeToDataFrame" />
+                    <Processor content="org.inviwo.VolumeSequenceToDataFrame" />
+                    <Processor content="org.inviwo.DataFrame.outport.metasink" />
+                    <Processor content="org.inviwo.DataFrame.outport.metasource" />
+                </Processors>
+            </Module>
             <Module name="EigenUtils" version="0">
                 <Processors>
                     <Processor content="org.inviwo.EigenMatrixToImage" />
                     <Processor content="org.inviwo.EigenMix" />
                     <Processor content="org.inviwo.EigenNormalize" />
+                    <Processor content="org.inviwo.TestMatrix" />
+                    <Processor content="EigenMatrixXf.outport.metasink" />
+                    <Processor content="EigenMatrixXf.outport.metasource" />
                 </Processors>
             </Module>
-            <Module name="FontRendering" version="2">
+            <Module name="FontRendering" version="3">
                 <Processors>
                     <Processor content="org.inviwo.TextOverlayGL" />
                 </Processors>
             </Module>
             <Module name="Nifti" version="0" />
+            <Module name="Plotting" version="1">
+                <Processors>
+                    <Processor content="org.inviwo.DataFrameColumnToColorVector" />
+                </Processors>
+            </Module>
+            <Module name="UserInterfaceGL" version="0">
+                <Processors>
+                    <Processor content="org.inviwo.CameraWidget" />
+                    <Processor content="org.inviwo.CropWidget" />
+                    <Processor content="org.inviwo.GLUIProcessor" />
+                    <Processor content="org.inviwo.PresentationProcessor" />
+                    <Processor content="org.inviwo.GLUITestProcessor" />
+                </Processors>
+            </Module>
+            <Module name="PlottingGL" version="1">
+                <Processors>
+                    <Processor content="org.inviwo.AxisRenderProcessor" />
+                    <Processor content="org.inviwo.ColorScaleLegend" />
+                    <Processor content="org.inviwo.ImagePlotProcessor" />
+                    <Processor content="org.inviwo.ParallelCoordinates" />
+                    <Processor content="org.inviwo.PersistenceDiagramPlotProcessor" />
+                    <Processor content="org.inviwo.ScatterPlotMatrixProcessor" />
+                    <Processor content="org.inviwo.ScatterPlotProcessor" />
+                    <Processor content="org.inviwo.VolumeAxis" />
+                </Processors>
+            </Module>
+            <Module name="png" version="0" />
             <Module name="PostProcessing" version="0">
                 <Processors>
                     <Processor content="org.inviwo.SSAO" />
                     <Processor content="org.inviwo.FXAA" />
+                    <Processor content="org.inviwo.Fog" />
                     <Processor content="org.inviwo.Tonemapping" />
                     <Processor content="org.inviwo.HdrBloom" />
                     <Processor content="org.inviwo.ImageBrightnessContrast" />
@@ -164,27 +272,26 @@
                 </Processors>
             </Module>
             <Module name="PVM" version="0" />
-            <Module name="Python3" version="0">
-                <Processors>
-                    <Processor content="org.inviwo.NumPyVolume" />
-                    <Processor content="org.inviwo.NumpyMandelbrot" />
-                    <Processor content="org.inviwo.NumPyMeshCreateTest" />
-                </Processors>
-            </Module>
-            <Module name="Python3Qt" version="0" />
-            <Module name="VectorFieldVisualization" version="1">
+            <Module name="VectorFieldVisualization" version="4">
                 <Processors>
                     <Processor content="org.inviwo.RBFVectorFieldGenerator2D" />
                     <Processor content="org.inviwo.RBFBased3DVectorFieldGenerator" />
-                    <Processor content="org.inviwo.SeedPointGenerator" />
+                    <Processor content="org.inviwo.SeedPointGenerator3D" />
                     <Processor content="org.inviwo.SeedPointsFromMask" />
-                    <Processor content="org.inviwo.StreamLines" />
-                    <Processor content="org.inviwo.PathLines" />
-                    <Processor content="org.inviwo.StreamRibbons" />
+                    <Processor content="org.inviwo.StreamLinesDeprecated" />
+                    <Processor content="org.inviwo.PathLinesDeprecated" />
+                    <Processor content="org.inviwo.StreamRibbonsDeprecated" />
                     <Processor content="org.inviwo.IntegralLineVectorToMesh" />
                     <Processor content="org.inviwo.Seed3Dto4D" />
+                    <Processor content="org.inviwo.StreamLines2D" />
+                    <Processor content="org.inviwo.StreamLines3D" />
+                    <Processor content="org.inviwo.PathLines3D" />
                     <Processor content="org.inviwo.SeedsFromMaskSequence" />
                     <Processor content="org.inviwo.DiscardShortLines" />
+                    <Processor content="org.inviwo.SeedPointGenerator2D" />
+                    <Processor content="org.inviwo.IntegralLineSetSelector" />
+                    <Processor content="org.inviwo.IntegralLineSet.outport.metasink" />
+                    <Processor content="org.inviwo.IntegralLineSet.outport.metasource" />
                 </Processors>
             </Module>
             <Module name="VectorFieldVisualizationGL" version="1">
@@ -202,6 +309,7 @@
                     <Processor content="org.inviwo.Vector3DDivergence" />
                     <Processor content="org.inviwo.TMIP" />
                     <Processor content="org.inviwo.VectorFieldGenerator4D" />
+                    <Processor content="org.inviwo.StreamParticles" />
                 </Processors>
             </Module>
             <Module name="TNM067Common" version="0">
@@ -237,10 +345,349 @@
         </Modules>
     </InviwoSetup>
     <ProcessorNetwork>
-        <ProcessorNetworkVersion content="15" />
+        <ProcessorNetworkVersion content="16" />
         <Processors>
-            <Processor type="org.inviwo.RBFVectorFieldGenerator2D" identifier="RandomVectorField">
+            <Processor type="org.inviwo.LineIntegralConvolution" identifier="Line Integral Convolution" displayName="Line Integral Convolution">
+                <PortGroups>
+                    <PortGroup content="default" key="noise" />
+                    <PortGroup content="default" key="outport" />
+                    <PortGroup content="default" key="vf" />
+                </PortGroups>
+                <InPorts>
+                    <InPort type="org.inviwo.Image.inport" identifier="vf" id="ref18" />
+                    <InPort type="org.inviwo.Image.inport" identifier="noise" id="ref19" />
+                </InPorts>
+                <OutPorts>
+                    <OutPort type="org.inviwo.Image.outport" identifier="outport" id="ref20" />
+                </OutPorts>
+                <Properties>
+                    <Property type="org.inviwo.IntProperty" identifier="steps" />
+                    <Property type="org.inviwo.FloatProperty" identifier="stepSize">
+                        <value content="0.0029809" />
+                    </Property>
+                </Properties>
+                <MetaDataMap>
+                    <MetaDataItem type="org.inviwo.ProcessorMetaData" key="org.inviwo.ProcessorMetaData">
+                        <position x="-225" y="-175" />
+                        <visibility content="1" />
+                        <selection content="0" />
+                    </MetaDataItem>
+                </MetaDataMap>
+            </Processor>
+            <Processor type="org.inviwo.RBFVectorFieldGenerator2D" identifier="RandomVectorField" displayName="RBF Based 2D Vector Field Generator">
                 <samplesx>
+                    <samplex x="-0.6298358368519717531697210688435006886721" y="0.8630817271889774655591054397518746554852" />
+                    <samplex x="-0.3589271272437797311027907198877073824406" y="-0.69114664880077603115182682813610881567" />
+                    <samplex x="-0.02964817020126864210993744563893415033817" y="0.2654754613837353449667944005341269075871" />
+                    <samplex x="-0.002877664689635905936881954403361305594444" y="0.1735939581476049209385337235289625823498" />
+                    <samplex x="0.09241463330293786526681287796236574649811" y="-0.1853843347661956464378363307332620024681" />
+                    <samplex x="-0.4059632800029375765404893172672018408775" y="-0.4242623601736098537529073837504256516695" />
+                    <samplex x="-0.01142046408394348233628079469781368970871" y="0.1315302609450861304196678247535601258278" />
+                    <samplex x="0.1546161403974082304557668976485729217529" y="-0.6643533709692646116451442139805294573307" />
+                    <samplex x="0.3085323644990132230248036648845300078392" y="0.5861794862351705770464604938752017915249" />
+                    <samplex x="0.9817039942339236269219782116124406456947" y="-0.7610304012987743060847378728794865310192" />
+                    <samplex x="0.01905175995293584279011156468186527490616" y="-0.5654601601418068890225754330458585172892" />
+                    <samplex x="-0.4825336576592437198840457313053775578737" y="0.6183505702892067024123434748617000877857" />
+                    <samplex x="-0.4516534928532297543668505568348336964846" y="0.5964007782534426205245381424902006983757" />
+                    <samplex x="0.6457692703075439411009028845001012086868" y="0.03027824398635448055472352280048653483391" />
+                    <samplex x="-0.136924459949518961821013363078236579895" y="0.7766074929699042783681761648040264844894" />
+                    <samplex x="0.404084074217946342955087857262697070837" y="0.4130840043545780382316934264963492751122" />
+                    <samplex x="-0.1479549457817229685119286841654684394598" y="-0.3542515656333105056319254799745976924896" />
+                    <samplex x="0.4224344822499683793637359485728666186333" y="0.03486152246657514552907741745002567768097" />
+                    <samplex x="0.1472849968167695422494034573901444673538" y="-0.2121334171915008059983165367157198488712" />
+                    <samplex x="0.4569970049798537381491314590675756335258" y="-0.2884927522330463789401733265549410134554" />
+                    <samplex x="0.7566005776555673190131301453220658004284" y="-0.2733482173525025871185789583250880241394" />
+                    <samplex x="0.8289511438911192353629076023935340344906" y="0.6527360116201015305392729715094901621342" />
+                    <samplex x="-0.316176788894035554200456772377947345376" y="-0.2366141229342779706001920203561894595623" />
+                    <samplex x="0.9156913439456373371427844176650978624821" y="0.6069042587920614462149160317494533956051" />
+                    <samplex x="-0.6298358368519717531697210688435006886721" y="0.8630817271889774655591054397518746554852" />
+                    <samplex x="-0.3589271272437797311027907198877073824406" y="-0.69114664880077603115182682813610881567" />
+                    <samplex x="-0.02964817020126864210993744563893415033817" y="0.2654754613837353449667944005341269075871" />
+                    <samplex x="-0.002877664689635905936881954403361305594444" y="0.1735939581476049209385337235289625823498" />
+                    <samplex x="0.09241463330293786526681287796236574649811" y="-0.1853843347661956464378363307332620024681" />
+                    <samplex x="-0.4059632800029375765404893172672018408775" y="-0.4242623601736098537529073837504256516695" />
+                    <samplex x="-0.01142046408394348233628079469781368970871" y="0.1315302609450861304196678247535601258278" />
+                    <samplex x="0.1546161403974082304557668976485729217529" y="-0.6643533709692646116451442139805294573307" />
+                    <samplex x="0.3085323644990132230248036648845300078392" y="0.5861794862351705770464604938752017915249" />
+                    <samplex x="0.9817039942339236269219782116124406456947" y="-0.7610304012987743060847378728794865310192" />
+                    <samplex x="0.01905175995293584279011156468186527490616" y="-0.5654601601418068890225754330458585172892" />
+                    <samplex x="-0.4825336576592437198840457313053775578737" y="0.6183505702892067024123434748617000877857" />
+                    <samplex x="-0.4516534928532297543668505568348336964846" y="0.5964007782534426205245381424902006983757" />
+                    <samplex x="0.6457692703075439411009028845001012086868" y="0.03027824398635448055472352280048653483391" />
+                    <samplex x="-0.136924459949518961821013363078236579895" y="0.7766074929699042783681761648040264844894" />
+                    <samplex x="0.404084074217946342955087857262697070837" y="0.4130840043545780382316934264963492751122" />
+                    <samplex x="-0.1479549457817229685119286841654684394598" y="-0.3542515656333105056319254799745976924896" />
+                    <samplex x="0.4224344822499683793637359485728666186333" y="0.03486152246657514552907741745002567768097" />
+                    <samplex x="0.1472849968167695422494034573901444673538" y="-0.2121334171915008059983165367157198488712" />
+                    <samplex x="0.4569970049798537381491314590675756335258" y="-0.2884927522330463789401733265549410134554" />
+                    <samplex x="0.7566005776555673190131301453220658004284" y="-0.2733482173525025871185789583250880241394" />
+                    <samplex x="0.8289511438911192353629076023935340344906" y="0.6527360116201015305392729715094901621342" />
+                    <samplex x="-0.316176788894035554200456772377947345376" y="-0.2366141229342779706001920203561894595623" />
+                    <samplex x="0.9156913439456373371427844176650978624821" y="0.6069042587920614462149160317494533956051" />
+                    <samplex x="-0.6298358368519717531697210688435006886721" y="0.8630817271889774655591054397518746554852" />
+                    <samplex x="-0.3589271272437797311027907198877073824406" y="-0.69114664880077603115182682813610881567" />
+                    <samplex x="-0.02964817020126864210993744563893415033817" y="0.2654754613837353449667944005341269075871" />
+                    <samplex x="-0.002877664689635905936881954403361305594444" y="0.1735939581476049209385337235289625823498" />
+                    <samplex x="0.09241463330293786526681287796236574649811" y="-0.1853843347661956464378363307332620024681" />
+                    <samplex x="-0.4059632800029375765404893172672018408775" y="-0.4242623601736098537529073837504256516695" />
+                    <samplex x="-0.01142046408394348233628079469781368970871" y="0.1315302609450861304196678247535601258278" />
+                    <samplex x="0.1546161403974082304557668976485729217529" y="-0.6643533709692646116451442139805294573307" />
+                    <samplex x="0.3085323644990132230248036648845300078392" y="0.5861794862351705770464604938752017915249" />
+                    <samplex x="0.9817039942339236269219782116124406456947" y="-0.7610304012987743060847378728794865310192" />
+                    <samplex x="0.01905175995293584279011156468186527490616" y="-0.5654601601418068890225754330458585172892" />
+                    <samplex x="-0.4825336576592437198840457313053775578737" y="0.6183505702892067024123434748617000877857" />
+                    <samplex x="-0.4516534928532297543668505568348336964846" y="0.5964007782534426205245381424902006983757" />
+                    <samplex x="0.6457692703075439411009028845001012086868" y="0.03027824398635448055472352280048653483391" />
+                    <samplex x="-0.136924459949518961821013363078236579895" y="0.7766074929699042783681761648040264844894" />
+                    <samplex x="0.404084074217946342955087857262697070837" y="0.4130840043545780382316934264963492751122" />
+                    <samplex x="-0.1479549457817229685119286841654684394598" y="-0.3542515656333105056319254799745976924896" />
+                    <samplex x="0.4224344822499683793637359485728666186333" y="0.03486152246657514552907741745002567768097" />
+                    <samplex x="0.1472849968167695422494034573901444673538" y="-0.2121334171915008059983165367157198488712" />
+                    <samplex x="0.4569970049798537381491314590675756335258" y="-0.2884927522330463789401733265549410134554" />
+                    <samplex x="0.7566005776555673190131301453220658004284" y="-0.2733482173525025871185789583250880241394" />
+                    <samplex x="0.8289511438911192353629076023935340344906" y="0.6527360116201015305392729715094901621342" />
+                    <samplex x="-0.316176788894035554200456772377947345376" y="-0.2366141229342779706001920203561894595623" />
+                    <samplex x="0.9156913439456373371427844176650978624821" y="0.6069042587920614462149160317494533956051" />
+                    <samplex x="-0.6298358368519717531697210688435006886721" y="0.8630817271889774655591054397518746554852" />
+                    <samplex x="-0.3589271272437797311027907198877073824406" y="-0.69114664880077603115182682813610881567" />
+                    <samplex x="-0.02964817020126864210993744563893415033817" y="0.2654754613837353449667944005341269075871" />
+                    <samplex x="-0.002877664689635905936881954403361305594444" y="0.1735939581476049209385337235289625823498" />
+                    <samplex x="0.09241463330293786526681287796236574649811" y="-0.1853843347661956464378363307332620024681" />
+                    <samplex x="-0.4059632800029375765404893172672018408775" y="-0.4242623601736098537529073837504256516695" />
+                    <samplex x="-0.01142046408394348233628079469781368970871" y="0.1315302609450861304196678247535601258278" />
+                    <samplex x="0.1546161403974082304557668976485729217529" y="-0.6643533709692646116451442139805294573307" />
+                    <samplex x="0.3085323644990132230248036648845300078392" y="0.5861794862351705770464604938752017915249" />
+                    <samplex x="0.9817039942339236269219782116124406456947" y="-0.7610304012987743060847378728794865310192" />
+                    <samplex x="0.01905175995293584279011156468186527490616" y="-0.5654601601418068890225754330458585172892" />
+                    <samplex x="-0.4825336576592437198840457313053775578737" y="0.6183505702892067024123434748617000877857" />
+                    <samplex x="-0.4516534928532297543668505568348336964846" y="0.5964007782534426205245381424902006983757" />
+                    <samplex x="0.6457692703075439411009028845001012086868" y="0.03027824398635448055472352280048653483391" />
+                    <samplex x="-0.136924459949518961821013363078236579895" y="0.7766074929699042783681761648040264844894" />
+                    <samplex x="0.404084074217946342955087857262697070837" y="0.4130840043545780382316934264963492751122" />
+                    <samplex x="-0.1479549457817229685119286841654684394598" y="-0.3542515656333105056319254799745976924896" />
+                    <samplex x="0.4224344822499683793637359485728666186333" y="0.03486152246657514552907741745002567768097" />
+                    <samplex x="0.1472849968167695422494034573901444673538" y="-0.2121334171915008059983165367157198488712" />
+                    <samplex x="0.4569970049798537381491314590675756335258" y="-0.2884927522330463789401733265549410134554" />
+                    <samplex x="0.7566005776555673190131301453220658004284" y="-0.2733482173525025871185789583250880241394" />
+                    <samplex x="0.8289511438911192353629076023935340344906" y="0.6527360116201015305392729715094901621342" />
+                    <samplex x="-0.316176788894035554200456772377947345376" y="-0.2366141229342779706001920203561894595623" />
+                    <samplex x="0.9156913439456373371427844176650978624821" y="0.6069042587920614462149160317494533956051" />
+                    <samplex x="-0.6298358368519717531697210688435006886721" y="0.8630817271889774655591054397518746554852" />
+                    <samplex x="-0.3589271272437797311027907198877073824406" y="-0.69114664880077603115182682813610881567" />
+                    <samplex x="-0.02964817020126864210993744563893415033817" y="0.2654754613837353449667944005341269075871" />
+                    <samplex x="-0.002877664689635905936881954403361305594444" y="0.1735939581476049209385337235289625823498" />
+                    <samplex x="0.09241463330293786526681287796236574649811" y="-0.1853843347661956464378363307332620024681" />
+                    <samplex x="-0.4059632800029375765404893172672018408775" y="-0.4242623601736098537529073837504256516695" />
+                    <samplex x="-0.01142046408394348233628079469781368970871" y="0.1315302609450861304196678247535601258278" />
+                    <samplex x="0.1546161403974082304557668976485729217529" y="-0.6643533709692646116451442139805294573307" />
+                    <samplex x="0.3085323644990132230248036648845300078392" y="0.5861794862351705770464604938752017915249" />
+                    <samplex x="0.9817039942339236269219782116124406456947" y="-0.7610304012987743060847378728794865310192" />
+                    <samplex x="0.01905175995293584279011156468186527490616" y="-0.5654601601418068890225754330458585172892" />
+                    <samplex x="-0.4825336576592437198840457313053775578737" y="0.6183505702892067024123434748617000877857" />
+                    <samplex x="-0.4516534928532297543668505568348336964846" y="0.5964007782534426205245381424902006983757" />
+                    <samplex x="0.6457692703075439411009028845001012086868" y="0.03027824398635448055472352280048653483391" />
+                    <samplex x="-0.136924459949518961821013363078236579895" y="0.7766074929699042783681761648040264844894" />
+                    <samplex x="0.404084074217946342955087857262697070837" y="0.4130840043545780382316934264963492751122" />
+                    <samplex x="-0.1479549457817229685119286841654684394598" y="-0.3542515656333105056319254799745976924896" />
+                    <samplex x="0.4224344822499683793637359485728666186333" y="0.03486152246657514552907741745002567768097" />
+                    <samplex x="0.1472849968167695422494034573901444673538" y="-0.2121334171915008059983165367157198488712" />
+                    <samplex x="0.4569970049798537381491314590675756335258" y="-0.2884927522330463789401733265549410134554" />
+                    <samplex x="0.7566005776555673190131301453220658004284" y="-0.2733482173525025871185789583250880241394" />
+                    <samplex x="0.8289511438911192353629076023935340344906" y="0.6527360116201015305392729715094901621342" />
+                    <samplex x="-0.316176788894035554200456772377947345376" y="-0.2366141229342779706001920203561894595623" />
+                    <samplex x="0.9156913439456373371427844176650978624821" y="0.6069042587920614462149160317494533956051" />
+                    <samplex x="-0.6298358368519717531697210688435006886721" y="0.8630817271889774655591054397518746554852" />
+                    <samplex x="-0.3589271272437797311027907198877073824406" y="-0.69114664880077603115182682813610881567" />
+                    <samplex x="-0.02964817020126864210993744563893415033817" y="0.2654754613837353449667944005341269075871" />
+                    <samplex x="-0.002877664689635905936881954403361305594444" y="0.1735939581476049209385337235289625823498" />
+                    <samplex x="0.09241463330293786526681287796236574649811" y="-0.1853843347661956464378363307332620024681" />
+                    <samplex x="-0.4059632800029375765404893172672018408775" y="-0.4242623601736098537529073837504256516695" />
+                    <samplex x="-0.01142046408394348233628079469781368970871" y="0.1315302609450861304196678247535601258278" />
+                    <samplex x="0.1546161403974082304557668976485729217529" y="-0.6643533709692646116451442139805294573307" />
+                    <samplex x="0.3085323644990132230248036648845300078392" y="0.5861794862351705770464604938752017915249" />
+                    <samplex x="0.9817039942339236269219782116124406456947" y="-0.7610304012987743060847378728794865310192" />
+                    <samplex x="0.01905175995293584279011156468186527490616" y="-0.5654601601418068890225754330458585172892" />
+                    <samplex x="-0.4825336576592437198840457313053775578737" y="0.6183505702892067024123434748617000877857" />
+                    <samplex x="-0.4516534928532297543668505568348336964846" y="0.5964007782534426205245381424902006983757" />
+                    <samplex x="0.6457692703075439411009028845001012086868" y="0.03027824398635448055472352280048653483391" />
+                    <samplex x="-0.136924459949518961821013363078236579895" y="0.7766074929699042783681761648040264844894" />
+                    <samplex x="0.404084074217946342955087857262697070837" y="0.4130840043545780382316934264963492751122" />
+                    <samplex x="-0.1479549457817229685119286841654684394598" y="-0.3542515656333105056319254799745976924896" />
+                    <samplex x="0.4224344822499683793637359485728666186333" y="0.03486152246657514552907741745002567768097" />
+                    <samplex x="0.1472849968167695422494034573901444673538" y="-0.2121334171915008059983165367157198488712" />
+                    <samplex x="0.4569970049798537381491314590675756335258" y="-0.2884927522330463789401733265549410134554" />
+                    <samplex x="0.7566005776555673190131301453220658004284" y="-0.2733482173525025871185789583250880241394" />
+                    <samplex x="0.8289511438911192353629076023935340344906" y="0.6527360116201015305392729715094901621342" />
+                    <samplex x="-0.316176788894035554200456772377947345376" y="-0.2366141229342779706001920203561894595623" />
+                    <samplex x="0.9156913439456373371427844176650978624821" y="0.6069042587920614462149160317494533956051" />
+                    <samplex x="-0.6298358368519717531697210688435006886721" y="0.8630817271889774655591054397518746554852" />
+                    <samplex x="-0.3589271272437797311027907198877073824406" y="-0.69114664880077603115182682813610881567" />
+                    <samplex x="-0.02964817020126864210993744563893415033817" y="0.2654754613837353449667944005341269075871" />
+                    <samplex x="-0.002877664689635905936881954403361305594444" y="0.1735939581476049209385337235289625823498" />
+                    <samplex x="0.09241463330293786526681287796236574649811" y="-0.1853843347661956464378363307332620024681" />
+                    <samplex x="-0.4059632800029375765404893172672018408775" y="-0.4242623601736098537529073837504256516695" />
+                    <samplex x="-0.01142046408394348233628079469781368970871" y="0.1315302609450861304196678247535601258278" />
+                    <samplex x="0.1546161403974082304557668976485729217529" y="-0.6643533709692646116451442139805294573307" />
+                    <samplex x="0.3085323644990132230248036648845300078392" y="0.5861794862351705770464604938752017915249" />
+                    <samplex x="0.9817039942339236269219782116124406456947" y="-0.7610304012987743060847378728794865310192" />
+                    <samplex x="0.01905175995293584279011156468186527490616" y="-0.5654601601418068890225754330458585172892" />
+                    <samplex x="-0.4825336576592437198840457313053775578737" y="0.6183505702892067024123434748617000877857" />
+                    <samplex x="-0.4516534928532297543668505568348336964846" y="0.5964007782534426205245381424902006983757" />
+                    <samplex x="0.6457692703075439411009028845001012086868" y="0.03027824398635448055472352280048653483391" />
+                    <samplex x="-0.136924459949518961821013363078236579895" y="0.7766074929699042783681761648040264844894" />
+                    <samplex x="0.404084074217946342955087857262697070837" y="0.4130840043545780382316934264963492751122" />
+                    <samplex x="-0.1479549457817229685119286841654684394598" y="-0.3542515656333105056319254799745976924896" />
+                    <samplex x="0.4224344822499683793637359485728666186333" y="0.03486152246657514552907741745002567768097" />
+                    <samplex x="0.1472849968167695422494034573901444673538" y="-0.2121334171915008059983165367157198488712" />
+                    <samplex x="0.4569970049798537381491314590675756335258" y="-0.2884927522330463789401733265549410134554" />
+                    <samplex x="0.7566005776555673190131301453220658004284" y="-0.2733482173525025871185789583250880241394" />
+                    <samplex x="0.8289511438911192353629076023935340344906" y="0.6527360116201015305392729715094901621342" />
+                    <samplex x="-0.316176788894035554200456772377947345376" y="-0.2366141229342779706001920203561894595623" />
+                    <samplex x="0.9156913439456373371427844176650978624821" y="0.6069042587920614462149160317494533956051" />
+                    <samplex x="-0.6298358368519717531697210688435006886721" y="0.8630817271889774655591054397518746554852" />
+                    <samplex x="-0.3589271272437797311027907198877073824406" y="-0.69114664880077603115182682813610881567" />
+                    <samplex x="-0.02964817020126864210993744563893415033817" y="0.2654754613837353449667944005341269075871" />
+                    <samplex x="-0.002877664689635905936881954403361305594444" y="0.1735939581476049209385337235289625823498" />
+                    <samplex x="0.09241463330293786526681287796236574649811" y="-0.1853843347661956464378363307332620024681" />
+                    <samplex x="-0.4059632800029375765404893172672018408775" y="-0.4242623601736098537529073837504256516695" />
+                    <samplex x="-0.01142046408394348233628079469781368970871" y="0.1315302609450861304196678247535601258278" />
+                    <samplex x="0.1546161403974082304557668976485729217529" y="-0.6643533709692646116451442139805294573307" />
+                    <samplex x="0.3085323644990132230248036648845300078392" y="0.5861794862351705770464604938752017915249" />
+                    <samplex x="0.9817039942339236269219782116124406456947" y="-0.7610304012987743060847378728794865310192" />
+                    <samplex x="0.01905175995293584279011156468186527490616" y="-0.5654601601418068890225754330458585172892" />
+                    <samplex x="-0.4825336576592437198840457313053775578737" y="0.6183505702892067024123434748617000877857" />
+                    <samplex x="-0.4516534928532297543668505568348336964846" y="0.5964007782534426205245381424902006983757" />
+                    <samplex x="0.6457692703075439411009028845001012086868" y="0.03027824398635448055472352280048653483391" />
+                    <samplex x="-0.136924459949518961821013363078236579895" y="0.7766074929699042783681761648040264844894" />
+                    <samplex x="0.404084074217946342955087857262697070837" y="0.4130840043545780382316934264963492751122" />
+                    <samplex x="-0.1479549457817229685119286841654684394598" y="-0.3542515656333105056319254799745976924896" />
+                    <samplex x="0.4224344822499683793637359485728666186333" y="0.03486152246657514552907741745002567768097" />
+                    <samplex x="0.1472849968167695422494034573901444673538" y="-0.2121334171915008059983165367157198488712" />
+                    <samplex x="0.4569970049798537381491314590675756335258" y="-0.2884927522330463789401733265549410134554" />
+                    <samplex x="0.7566005776555673190131301453220658004284" y="-0.2733482173525025871185789583250880241394" />
+                    <samplex x="0.8289511438911192353629076023935340344906" y="0.6527360116201015305392729715094901621342" />
+                    <samplex x="-0.316176788894035554200456772377947345376" y="-0.2366141229342779706001920203561894595623" />
+                    <samplex x="0.9156913439456373371427844176650978624821" y="0.6069042587920614462149160317494533956051" />
+                    <samplex x="-0.6298358368519717531697210688435006886721" y="0.8630817271889774655591054397518746554852" />
+                    <samplex x="-0.3589271272437797311027907198877073824406" y="-0.69114664880077603115182682813610881567" />
+                    <samplex x="-0.02964817020126864210993744563893415033817" y="0.2654754613837353449667944005341269075871" />
+                    <samplex x="-0.002877664689635905936881954403361305594444" y="0.1735939581476049209385337235289625823498" />
+                    <samplex x="0.09241463330293786526681287796236574649811" y="-0.1853843347661956464378363307332620024681" />
+                    <samplex x="-0.4059632800029375765404893172672018408775" y="-0.4242623601736098537529073837504256516695" />
+                    <samplex x="-0.01142046408394348233628079469781368970871" y="0.1315302609450861304196678247535601258278" />
+                    <samplex x="0.1546161403974082304557668976485729217529" y="-0.6643533709692646116451442139805294573307" />
+                    <samplex x="0.3085323644990132230248036648845300078392" y="0.5861794862351705770464604938752017915249" />
+                    <samplex x="0.9817039942339236269219782116124406456947" y="-0.7610304012987743060847378728794865310192" />
+                    <samplex x="0.01905175995293584279011156468186527490616" y="-0.5654601601418068890225754330458585172892" />
+                    <samplex x="-0.4825336576592437198840457313053775578737" y="0.6183505702892067024123434748617000877857" />
+                    <samplex x="-0.4516534928532297543668505568348336964846" y="0.5964007782534426205245381424902006983757" />
+                    <samplex x="0.6457692703075439411009028845001012086868" y="0.03027824398635448055472352280048653483391" />
+                    <samplex x="-0.136924459949518961821013363078236579895" y="0.7766074929699042783681761648040264844894" />
+                    <samplex x="0.404084074217946342955087857262697070837" y="0.4130840043545780382316934264963492751122" />
+                    <samplex x="-0.1479549457817229685119286841654684394598" y="-0.3542515656333105056319254799745976924896" />
+                    <samplex x="0.4224344822499683793637359485728666186333" y="0.03486152246657514552907741745002567768097" />
+                    <samplex x="0.1472849968167695422494034573901444673538" y="-0.2121334171915008059983165367157198488712" />
+                    <samplex x="0.4569970049798537381491314590675756335258" y="-0.2884927522330463789401733265549410134554" />
+                    <samplex x="0.7566005776555673190131301453220658004284" y="-0.2733482173525025871185789583250880241394" />
+                    <samplex x="0.8289511438911192353629076023935340344906" y="0.6527360116201015305392729715094901621342" />
+                    <samplex x="-0.316176788894035554200456772377947345376" y="-0.2366141229342779706001920203561894595623" />
+                    <samplex x="0.9156913439456373371427844176650978624821" y="0.6069042587920614462149160317494533956051" />
+                    <samplex x="-0.6298358368519717531697210688435006886721" y="0.8630817271889774655591054397518746554852" />
+                    <samplex x="-0.3589271272437797311027907198877073824406" y="-0.69114664880077603115182682813610881567" />
+                    <samplex x="-0.02964817020126864210993744563893415033817" y="0.2654754613837353449667944005341269075871" />
+                    <samplex x="-0.002877664689635905936881954403361305594444" y="0.1735939581476049209385337235289625823498" />
+                    <samplex x="0.09241463330293786526681287796236574649811" y="-0.1853843347661956464378363307332620024681" />
+                    <samplex x="-0.4059632800029375765404893172672018408775" y="-0.4242623601736098537529073837504256516695" />
+                    <samplex x="-0.01142046408394348233628079469781368970871" y="0.1315302609450861304196678247535601258278" />
+                    <samplex x="0.1546161403974082304557668976485729217529" y="-0.6643533709692646116451442139805294573307" />
+                    <samplex x="0.3085323644990132230248036648845300078392" y="0.5861794862351705770464604938752017915249" />
+                    <samplex x="0.9817039942339236269219782116124406456947" y="-0.7610304012987743060847378728794865310192" />
+                    <samplex x="0.01905175995293584279011156468186527490616" y="-0.5654601601418068890225754330458585172892" />
+                    <samplex x="-0.4825336576592437198840457313053775578737" y="0.6183505702892067024123434748617000877857" />
+                    <samplex x="-0.4516534928532297543668505568348336964846" y="0.5964007782534426205245381424902006983757" />
+                    <samplex x="0.6457692703075439411009028845001012086868" y="0.03027824398635448055472352280048653483391" />
+                    <samplex x="-0.136924459949518961821013363078236579895" y="0.7766074929699042783681761648040264844894" />
+                    <samplex x="0.404084074217946342955087857262697070837" y="0.4130840043545780382316934264963492751122" />
+                    <samplex x="-0.1479549457817229685119286841654684394598" y="-0.3542515656333105056319254799745976924896" />
+                    <samplex x="0.4224344822499683793637359485728666186333" y="0.03486152246657514552907741745002567768097" />
+                    <samplex x="0.1472849968167695422494034573901444673538" y="-0.2121334171915008059983165367157198488712" />
+                    <samplex x="0.4569970049798537381491314590675756335258" y="-0.2884927522330463789401733265549410134554" />
+                    <samplex x="0.7566005776555673190131301453220658004284" y="-0.2733482173525025871185789583250880241394" />
+                    <samplex x="0.8289511438911192353629076023935340344906" y="0.6527360116201015305392729715094901621342" />
+                    <samplex x="-0.316176788894035554200456772377947345376" y="-0.2366141229342779706001920203561894595623" />
+                    <samplex x="0.9156913439456373371427844176650978624821" y="0.6069042587920614462149160317494533956051" />
+                    <samplex x="-0.6298358368519717531697210688435006886721" y="0.8630817271889774655591054397518746554852" />
+                    <samplex x="-0.3589271272437797311027907198877073824406" y="-0.69114664880077603115182682813610881567" />
+                    <samplex x="-0.02964817020126864210993744563893415033817" y="0.2654754613837353449667944005341269075871" />
+                    <samplex x="-0.002877664689635905936881954403361305594444" y="0.1735939581476049209385337235289625823498" />
+                    <samplex x="0.09241463330293786526681287796236574649811" y="-0.1853843347661956464378363307332620024681" />
+                    <samplex x="-0.4059632800029375765404893172672018408775" y="-0.4242623601736098537529073837504256516695" />
+                    <samplex x="-0.01142046408394348233628079469781368970871" y="0.1315302609450861304196678247535601258278" />
+                    <samplex x="0.1546161403974082304557668976485729217529" y="-0.6643533709692646116451442139805294573307" />
+                    <samplex x="0.3085323644990132230248036648845300078392" y="0.5861794862351705770464604938752017915249" />
+                    <samplex x="0.9817039942339236269219782116124406456947" y="-0.7610304012987743060847378728794865310192" />
+                    <samplex x="0.01905175995293584279011156468186527490616" y="-0.5654601601418068890225754330458585172892" />
+                    <samplex x="-0.4825336576592437198840457313053775578737" y="0.6183505702892067024123434748617000877857" />
+                    <samplex x="-0.4516534928532297543668505568348336964846" y="0.5964007782534426205245381424902006983757" />
+                    <samplex x="0.6457692703075439411009028845001012086868" y="0.03027824398635448055472352280048653483391" />
+                    <samplex x="-0.136924459949518961821013363078236579895" y="0.7766074929699042783681761648040264844894" />
+                    <samplex x="0.404084074217946342955087857262697070837" y="0.4130840043545780382316934264963492751122" />
+                    <samplex x="-0.1479549457817229685119286841654684394598" y="-0.3542515656333105056319254799745976924896" />
+                    <samplex x="0.4224344822499683793637359485728666186333" y="0.03486152246657514552907741745002567768097" />
+                    <samplex x="0.1472849968167695422494034573901444673538" y="-0.2121334171915008059983165367157198488712" />
+                    <samplex x="0.4569970049798537381491314590675756335258" y="-0.2884927522330463789401733265549410134554" />
+                    <samplex x="0.7566005776555673190131301453220658004284" y="-0.2733482173525025871185789583250880241394" />
+                    <samplex x="0.8289511438911192353629076023935340344906" y="0.6527360116201015305392729715094901621342" />
+                    <samplex x="-0.316176788894035554200456772377947345376" y="-0.2366141229342779706001920203561894595623" />
+                    <samplex x="0.9156913439456373371427844176650978624821" y="0.6069042587920614462149160317494533956051" />
+                    <samplex x="-0.6298358368519717531697210688435006886721" y="0.8630817271889774655591054397518746554852" />
+                    <samplex x="-0.3589271272437797311027907198877073824406" y="-0.69114664880077603115182682813610881567" />
+                    <samplex x="-0.02964817020126864210993744563893415033817" y="0.2654754613837353449667944005341269075871" />
+                    <samplex x="-0.002877664689635905936881954403361305594444" y="0.1735939581476049209385337235289625823498" />
+                    <samplex x="0.09241463330293786526681287796236574649811" y="-0.1853843347661956464378363307332620024681" />
+                    <samplex x="-0.4059632800029375765404893172672018408775" y="-0.4242623601736098537529073837504256516695" />
+                    <samplex x="-0.01142046408394348233628079469781368970871" y="0.1315302609450861304196678247535601258278" />
+                    <samplex x="0.1546161403974082304557668976485729217529" y="-0.6643533709692646116451442139805294573307" />
+                    <samplex x="0.3085323644990132230248036648845300078392" y="0.5861794862351705770464604938752017915249" />
+                    <samplex x="0.9817039942339236269219782116124406456947" y="-0.7610304012987743060847378728794865310192" />
+                    <samplex x="0.01905175995293584279011156468186527490616" y="-0.5654601601418068890225754330458585172892" />
+                    <samplex x="-0.4825336576592437198840457313053775578737" y="0.6183505702892067024123434748617000877857" />
+                    <samplex x="-0.4516534928532297543668505568348336964846" y="0.5964007782534426205245381424902006983757" />
+                    <samplex x="0.6457692703075439411009028845001012086868" y="0.03027824398635448055472352280048653483391" />
+                    <samplex x="-0.136924459949518961821013363078236579895" y="0.7766074929699042783681761648040264844894" />
+                    <samplex x="0.404084074217946342955087857262697070837" y="0.4130840043545780382316934264963492751122" />
+                    <samplex x="-0.1479549457817229685119286841654684394598" y="-0.3542515656333105056319254799745976924896" />
+                    <samplex x="0.4224344822499683793637359485728666186333" y="0.03486152246657514552907741745002567768097" />
+                    <samplex x="0.1472849968167695422494034573901444673538" y="-0.2121334171915008059983165367157198488712" />
+                    <samplex x="0.4569970049798537381491314590675756335258" y="-0.2884927522330463789401733265549410134554" />
+                    <samplex x="0.7566005776555673190131301453220658004284" y="-0.2733482173525025871185789583250880241394" />
+                    <samplex x="0.8289511438911192353629076023935340344906" y="0.6527360116201015305392729715094901621342" />
+                    <samplex x="-0.316176788894035554200456772377947345376" y="-0.2366141229342779706001920203561894595623" />
+                    <samplex x="0.9156913439456373371427844176650978624821" y="0.6069042587920614462149160317494533956051" />
+                    <samplex x="-0.6298358368519717531697210688435006886721" y="0.8630817271889774655591054397518746554852" />
+                    <samplex x="-0.3589271272437797311027907198877073824406" y="-0.69114664880077603115182682813610881567" />
+                    <samplex x="-0.02964817020126864210993744563893415033817" y="0.2654754613837353449667944005341269075871" />
+                    <samplex x="-0.002877664689635905936881954403361305594444" y="0.1735939581476049209385337235289625823498" />
+                    <samplex x="0.09241463330293786526681287796236574649811" y="-0.1853843347661956464378363307332620024681" />
+                    <samplex x="-0.4059632800029375765404893172672018408775" y="-0.4242623601736098537529073837504256516695" />
+                    <samplex x="-0.01142046408394348233628079469781368970871" y="0.1315302609450861304196678247535601258278" />
+                    <samplex x="0.1546161403974082304557668976485729217529" y="-0.6643533709692646116451442139805294573307" />
+                    <samplex x="0.3085323644990132230248036648845300078392" y="0.5861794862351705770464604938752017915249" />
+                    <samplex x="0.9817039942339236269219782116124406456947" y="-0.7610304012987743060847378728794865310192" />
+                    <samplex x="0.01905175995293584279011156468186527490616" y="-0.5654601601418068890225754330458585172892" />
+                    <samplex x="-0.4825336576592437198840457313053775578737" y="0.6183505702892067024123434748617000877857" />
+                    <samplex x="-0.4516534928532297543668505568348336964846" y="0.5964007782534426205245381424902006983757" />
+                    <samplex x="0.6457692703075439411009028845001012086868" y="0.03027824398635448055472352280048653483391" />
+                    <samplex x="-0.136924459949518961821013363078236579895" y="0.7766074929699042783681761648040264844894" />
+                    <samplex x="0.404084074217946342955087857262697070837" y="0.4130840043545780382316934264963492751122" />
+                    <samplex x="-0.1479549457817229685119286841654684394598" y="-0.3542515656333105056319254799745976924896" />
+                    <samplex x="0.4224344822499683793637359485728666186333" y="0.03486152246657514552907741745002567768097" />
+                    <samplex x="0.1472849968167695422494034573901444673538" y="-0.2121334171915008059983165367157198488712" />
+                    <samplex x="0.4569970049798537381491314590675756335258" y="-0.2884927522330463789401733265549410134554" />
+                    <samplex x="0.7566005776555673190131301453220658004284" y="-0.2733482173525025871185789583250880241394" />
+                    <samplex x="0.8289511438911192353629076023935340344906" y="0.6527360116201015305392729715094901621342" />
+                    <samplex x="-0.316176788894035554200456772377947345376" y="-0.2366141229342779706001920203561894595623" />
+                    <samplex x="0.9156913439456373371427844176650978624821" y="0.6069042587920614462149160317494533956051" />
                     <samplex x="-0.6298358368519717531697210688435006886721" y="0.8630817271889774655591054397518746554852" />
                     <samplex x="-0.3589271272437797311027907198877073824406" y="-0.69114664880077603115182682813610881567" />
                     <samplex x="-0.02964817020126864210993744563893415033817" y="0.2654754613837353449667944005341269075871" />
@@ -291,12 +738,324 @@
                     <sampley x="0.40520966053009033203125" y="-0.2509595453739166259765625" />
                     <sampley x="-0.40053665637969970703125" y="0.096267946064472198486328125" />
                     <sampley x="0.066750921308994293212890625" y="0.51247918605804443359375" />
+                    <sampley x="-1.00429689884185791015625" y="0.342222690582275390625" />
+                    <sampley x="0.79589164257049560546875" y="2.391224384307861328125" />
+                    <sampley x="-0.11135677993297576904296875" y="0.243655383586883544921875" />
+                    <sampley x="0.3713748455047607421875" y="1.93061316013336181640625" />
+                    <sampley x="0.389052331447601318359375" y="0.78768813610076904296875" />
+                    <sampley x="-1.6937525272369384765625" y="-1.515964508056640625" />
+                    <sampley x="0.012316773645579814910888671875" y="0.068872034549713134765625" />
+                    <sampley x="0.757195055484771728515625" y="-0.8324472904205322265625" />
+                    <sampley x="0.284616410732269287109375" y="0.46815311908721923828125" />
+                    <sampley x="0.24345208704471588134765625" y="0.328806400299072265625" />
+                    <sampley x="-1.73725402355194091796875" y="0.0735456049442291259765625" />
+                    <sampley x="0.684299170970916748046875" y="-0.897519052028656005859375" />
+                    <sampley x="0.3107435405254364013671875" y="-0.72888648509979248046875" />
+                    <sampley x="-0.00244178320281207561492919921875" y="-0.01325125433504581451416015625" />
+                    <sampley x="-0.921274602413177490234375" y="0.3567916452884674072265625" />
+                    <sampley x="-0.835281074047088623046875" y="0.10007689893245697021484375" />
+                    <sampley x="0.0547069124877452850341796875" y="-0.728462874889373779296875" />
+                    <sampley x="-0.5874578952789306640625" y="0.521390378475189208984375" />
+                    <sampley x="-2.66627216339111328125" y="1.3260538578033447265625" />
+                    <sampley x="-0.35817253589630126953125" y="-1.509992122650146484375" />
+                    <sampley x="-0.069938831031322479248046875" y="-0.001409434131346642971038818359375" />
+                    <sampley x="0.40520966053009033203125" y="-0.2509595453739166259765625" />
+                    <sampley x="-0.40053665637969970703125" y="0.096267946064472198486328125" />
+                    <sampley x="0.066750921308994293212890625" y="0.51247918605804443359375" />
+                    <sampley x="-1.00429689884185791015625" y="0.342222690582275390625" />
+                    <sampley x="0.79589164257049560546875" y="2.391224384307861328125" />
+                    <sampley x="-0.11135677993297576904296875" y="0.243655383586883544921875" />
+                    <sampley x="0.3713748455047607421875" y="1.93061316013336181640625" />
+                    <sampley x="0.389052331447601318359375" y="0.78768813610076904296875" />
+                    <sampley x="-1.6937525272369384765625" y="-1.515964508056640625" />
+                    <sampley x="0.012316773645579814910888671875" y="0.068872034549713134765625" />
+                    <sampley x="0.757195055484771728515625" y="-0.8324472904205322265625" />
+                    <sampley x="0.284616410732269287109375" y="0.46815311908721923828125" />
+                    <sampley x="0.24345208704471588134765625" y="0.328806400299072265625" />
+                    <sampley x="-1.73725402355194091796875" y="0.0735456049442291259765625" />
+                    <sampley x="0.684299170970916748046875" y="-0.897519052028656005859375" />
+                    <sampley x="0.3107435405254364013671875" y="-0.72888648509979248046875" />
+                    <sampley x="-0.00244178320281207561492919921875" y="-0.01325125433504581451416015625" />
+                    <sampley x="-0.921274602413177490234375" y="0.3567916452884674072265625" />
+                    <sampley x="-0.835281074047088623046875" y="0.10007689893245697021484375" />
+                    <sampley x="0.0547069124877452850341796875" y="-0.728462874889373779296875" />
+                    <sampley x="-0.5874578952789306640625" y="0.521390378475189208984375" />
+                    <sampley x="-2.66627216339111328125" y="1.3260538578033447265625" />
+                    <sampley x="-0.35817253589630126953125" y="-1.509992122650146484375" />
+                    <sampley x="-0.069938831031322479248046875" y="-0.001409434131346642971038818359375" />
+                    <sampley x="0.40520966053009033203125" y="-0.2509595453739166259765625" />
+                    <sampley x="-0.40053665637969970703125" y="0.096267946064472198486328125" />
+                    <sampley x="0.066750921308994293212890625" y="0.51247918605804443359375" />
+                    <sampley x="-1.00429689884185791015625" y="0.342222690582275390625" />
+                    <sampley x="0.79589164257049560546875" y="2.391224384307861328125" />
+                    <sampley x="-0.11135677993297576904296875" y="0.243655383586883544921875" />
+                    <sampley x="0.3713748455047607421875" y="1.93061316013336181640625" />
+                    <sampley x="0.389052331447601318359375" y="0.78768813610076904296875" />
+                    <sampley x="-1.6937525272369384765625" y="-1.515964508056640625" />
+                    <sampley x="0.012316773645579814910888671875" y="0.068872034549713134765625" />
+                    <sampley x="0.757195055484771728515625" y="-0.8324472904205322265625" />
+                    <sampley x="0.284616410732269287109375" y="0.46815311908721923828125" />
+                    <sampley x="0.24345208704471588134765625" y="0.328806400299072265625" />
+                    <sampley x="-1.73725402355194091796875" y="0.0735456049442291259765625" />
+                    <sampley x="0.684299170970916748046875" y="-0.897519052028656005859375" />
+                    <sampley x="0.3107435405254364013671875" y="-0.72888648509979248046875" />
+                    <sampley x="-0.00244178320281207561492919921875" y="-0.01325125433504581451416015625" />
+                    <sampley x="-0.921274602413177490234375" y="0.3567916452884674072265625" />
+                    <sampley x="-0.835281074047088623046875" y="0.10007689893245697021484375" />
+                    <sampley x="0.0547069124877452850341796875" y="-0.728462874889373779296875" />
+                    <sampley x="-0.5874578952789306640625" y="0.521390378475189208984375" />
+                    <sampley x="-2.66627216339111328125" y="1.3260538578033447265625" />
+                    <sampley x="-0.35817253589630126953125" y="-1.509992122650146484375" />
+                    <sampley x="-0.069938831031322479248046875" y="-0.001409434131346642971038818359375" />
+                    <sampley x="0.40520966053009033203125" y="-0.2509595453739166259765625" />
+                    <sampley x="-0.40053665637969970703125" y="0.096267946064472198486328125" />
+                    <sampley x="0.066750921308994293212890625" y="0.51247918605804443359375" />
+                    <sampley x="-1.00429689884185791015625" y="0.342222690582275390625" />
+                    <sampley x="0.79589164257049560546875" y="2.391224384307861328125" />
+                    <sampley x="-0.11135677993297576904296875" y="0.243655383586883544921875" />
+                    <sampley x="0.3713748455047607421875" y="1.93061316013336181640625" />
+                    <sampley x="0.389052331447601318359375" y="0.78768813610076904296875" />
+                    <sampley x="-1.6937525272369384765625" y="-1.515964508056640625" />
+                    <sampley x="0.012316773645579814910888671875" y="0.068872034549713134765625" />
+                    <sampley x="0.757195055484771728515625" y="-0.8324472904205322265625" />
+                    <sampley x="0.284616410732269287109375" y="0.46815311908721923828125" />
+                    <sampley x="0.24345208704471588134765625" y="0.328806400299072265625" />
+                    <sampley x="-1.73725402355194091796875" y="0.0735456049442291259765625" />
+                    <sampley x="0.684299170970916748046875" y="-0.897519052028656005859375" />
+                    <sampley x="0.3107435405254364013671875" y="-0.72888648509979248046875" />
+                    <sampley x="-0.00244178320281207561492919921875" y="-0.01325125433504581451416015625" />
+                    <sampley x="-0.921274602413177490234375" y="0.3567916452884674072265625" />
+                    <sampley x="-0.835281074047088623046875" y="0.10007689893245697021484375" />
+                    <sampley x="0.0547069124877452850341796875" y="-0.728462874889373779296875" />
+                    <sampley x="-0.5874578952789306640625" y="0.521390378475189208984375" />
+                    <sampley x="-2.66627216339111328125" y="1.3260538578033447265625" />
+                    <sampley x="-0.35817253589630126953125" y="-1.509992122650146484375" />
+                    <sampley x="-0.069938831031322479248046875" y="-0.001409434131346642971038818359375" />
+                    <sampley x="0.40520966053009033203125" y="-0.2509595453739166259765625" />
+                    <sampley x="-0.40053665637969970703125" y="0.096267946064472198486328125" />
+                    <sampley x="0.066750921308994293212890625" y="0.51247918605804443359375" />
+                    <sampley x="-1.00429689884185791015625" y="0.342222690582275390625" />
+                    <sampley x="0.79589164257049560546875" y="2.391224384307861328125" />
+                    <sampley x="-0.11135677993297576904296875" y="0.243655383586883544921875" />
+                    <sampley x="0.3713748455047607421875" y="1.93061316013336181640625" />
+                    <sampley x="0.389052331447601318359375" y="0.78768813610076904296875" />
+                    <sampley x="-1.6937525272369384765625" y="-1.515964508056640625" />
+                    <sampley x="0.012316773645579814910888671875" y="0.068872034549713134765625" />
+                    <sampley x="0.757195055484771728515625" y="-0.8324472904205322265625" />
+                    <sampley x="0.284616410732269287109375" y="0.46815311908721923828125" />
+                    <sampley x="0.24345208704471588134765625" y="0.328806400299072265625" />
+                    <sampley x="-1.73725402355194091796875" y="0.0735456049442291259765625" />
+                    <sampley x="0.684299170970916748046875" y="-0.897519052028656005859375" />
+                    <sampley x="0.3107435405254364013671875" y="-0.72888648509979248046875" />
+                    <sampley x="-0.00244178320281207561492919921875" y="-0.01325125433504581451416015625" />
+                    <sampley x="-0.921274602413177490234375" y="0.3567916452884674072265625" />
+                    <sampley x="-0.835281074047088623046875" y="0.10007689893245697021484375" />
+                    <sampley x="0.0547069124877452850341796875" y="-0.728462874889373779296875" />
+                    <sampley x="-0.5874578952789306640625" y="0.521390378475189208984375" />
+                    <sampley x="-2.66627216339111328125" y="1.3260538578033447265625" />
+                    <sampley x="-0.35817253589630126953125" y="-1.509992122650146484375" />
+                    <sampley x="-0.069938831031322479248046875" y="-0.001409434131346642971038818359375" />
+                    <sampley x="0.40520966053009033203125" y="-0.2509595453739166259765625" />
+                    <sampley x="-0.40053665637969970703125" y="0.096267946064472198486328125" />
+                    <sampley x="0.066750921308994293212890625" y="0.51247918605804443359375" />
+                    <sampley x="-1.00429689884185791015625" y="0.342222690582275390625" />
+                    <sampley x="0.79589164257049560546875" y="2.391224384307861328125" />
+                    <sampley x="-0.11135677993297576904296875" y="0.243655383586883544921875" />
+                    <sampley x="0.3713748455047607421875" y="1.93061316013336181640625" />
+                    <sampley x="0.389052331447601318359375" y="0.78768813610076904296875" />
+                    <sampley x="-1.6937525272369384765625" y="-1.515964508056640625" />
+                    <sampley x="0.012316773645579814910888671875" y="0.068872034549713134765625" />
+                    <sampley x="0.757195055484771728515625" y="-0.8324472904205322265625" />
+                    <sampley x="0.284616410732269287109375" y="0.46815311908721923828125" />
+                    <sampley x="0.24345208704471588134765625" y="0.328806400299072265625" />
+                    <sampley x="-1.73725402355194091796875" y="0.0735456049442291259765625" />
+                    <sampley x="0.684299170970916748046875" y="-0.897519052028656005859375" />
+                    <sampley x="0.3107435405254364013671875" y="-0.72888648509979248046875" />
+                    <sampley x="-0.00244178320281207561492919921875" y="-0.01325125433504581451416015625" />
+                    <sampley x="-0.921274602413177490234375" y="0.3567916452884674072265625" />
+                    <sampley x="-0.835281074047088623046875" y="0.10007689893245697021484375" />
+                    <sampley x="0.0547069124877452850341796875" y="-0.728462874889373779296875" />
+                    <sampley x="-0.5874578952789306640625" y="0.521390378475189208984375" />
+                    <sampley x="-2.66627216339111328125" y="1.3260538578033447265625" />
+                    <sampley x="-0.35817253589630126953125" y="-1.509992122650146484375" />
+                    <sampley x="-0.069938831031322479248046875" y="-0.001409434131346642971038818359375" />
+                    <sampley x="0.40520966053009033203125" y="-0.2509595453739166259765625" />
+                    <sampley x="-0.40053665637969970703125" y="0.096267946064472198486328125" />
+                    <sampley x="0.066750921308994293212890625" y="0.51247918605804443359375" />
+                    <sampley x="-1.00429689884185791015625" y="0.342222690582275390625" />
+                    <sampley x="0.79589164257049560546875" y="2.391224384307861328125" />
+                    <sampley x="-0.11135677993297576904296875" y="0.243655383586883544921875" />
+                    <sampley x="0.3713748455047607421875" y="1.93061316013336181640625" />
+                    <sampley x="0.389052331447601318359375" y="0.78768813610076904296875" />
+                    <sampley x="-1.6937525272369384765625" y="-1.515964508056640625" />
+                    <sampley x="0.012316773645579814910888671875" y="0.068872034549713134765625" />
+                    <sampley x="0.757195055484771728515625" y="-0.8324472904205322265625" />
+                    <sampley x="0.284616410732269287109375" y="0.46815311908721923828125" />
+                    <sampley x="0.24345208704471588134765625" y="0.328806400299072265625" />
+                    <sampley x="-1.73725402355194091796875" y="0.0735456049442291259765625" />
+                    <sampley x="0.684299170970916748046875" y="-0.897519052028656005859375" />
+                    <sampley x="0.3107435405254364013671875" y="-0.72888648509979248046875" />
+                    <sampley x="-0.00244178320281207561492919921875" y="-0.01325125433504581451416015625" />
+                    <sampley x="-0.921274602413177490234375" y="0.3567916452884674072265625" />
+                    <sampley x="-0.835281074047088623046875" y="0.10007689893245697021484375" />
+                    <sampley x="0.0547069124877452850341796875" y="-0.728462874889373779296875" />
+                    <sampley x="-0.5874578952789306640625" y="0.521390378475189208984375" />
+                    <sampley x="-2.66627216339111328125" y="1.3260538578033447265625" />
+                    <sampley x="-0.35817253589630126953125" y="-1.509992122650146484375" />
+                    <sampley x="-0.069938831031322479248046875" y="-0.001409434131346642971038818359375" />
+                    <sampley x="0.40520966053009033203125" y="-0.2509595453739166259765625" />
+                    <sampley x="-0.40053665637969970703125" y="0.096267946064472198486328125" />
+                    <sampley x="0.066750921308994293212890625" y="0.51247918605804443359375" />
+                    <sampley x="-1.00429689884185791015625" y="0.342222690582275390625" />
+                    <sampley x="0.79589164257049560546875" y="2.391224384307861328125" />
+                    <sampley x="-0.11135677993297576904296875" y="0.243655383586883544921875" />
+                    <sampley x="0.3713748455047607421875" y="1.93061316013336181640625" />
+                    <sampley x="0.389052331447601318359375" y="0.78768813610076904296875" />
+                    <sampley x="-1.6937525272369384765625" y="-1.515964508056640625" />
+                    <sampley x="0.012316773645579814910888671875" y="0.068872034549713134765625" />
+                    <sampley x="0.757195055484771728515625" y="-0.8324472904205322265625" />
+                    <sampley x="0.284616410732269287109375" y="0.46815311908721923828125" />
+                    <sampley x="0.24345208704471588134765625" y="0.328806400299072265625" />
+                    <sampley x="-1.73725402355194091796875" y="0.0735456049442291259765625" />
+                    <sampley x="0.684299170970916748046875" y="-0.897519052028656005859375" />
+                    <sampley x="0.3107435405254364013671875" y="-0.72888648509979248046875" />
+                    <sampley x="-0.00244178320281207561492919921875" y="-0.01325125433504581451416015625" />
+                    <sampley x="-0.921274602413177490234375" y="0.3567916452884674072265625" />
+                    <sampley x="-0.835281074047088623046875" y="0.10007689893245697021484375" />
+                    <sampley x="0.0547069124877452850341796875" y="-0.728462874889373779296875" />
+                    <sampley x="-0.5874578952789306640625" y="0.521390378475189208984375" />
+                    <sampley x="-2.66627216339111328125" y="1.3260538578033447265625" />
+                    <sampley x="-0.35817253589630126953125" y="-1.509992122650146484375" />
+                    <sampley x="-0.069938831031322479248046875" y="-0.001409434131346642971038818359375" />
+                    <sampley x="0.40520966053009033203125" y="-0.2509595453739166259765625" />
+                    <sampley x="-0.40053665637969970703125" y="0.096267946064472198486328125" />
+                    <sampley x="0.066750921308994293212890625" y="0.51247918605804443359375" />
+                    <sampley x="-1.00429689884185791015625" y="0.342222690582275390625" />
+                    <sampley x="0.79589164257049560546875" y="2.391224384307861328125" />
+                    <sampley x="-0.11135677993297576904296875" y="0.243655383586883544921875" />
+                    <sampley x="0.3713748455047607421875" y="1.93061316013336181640625" />
+                    <sampley x="0.389052331447601318359375" y="0.78768813610076904296875" />
+                    <sampley x="-1.6937525272369384765625" y="-1.515964508056640625" />
+                    <sampley x="0.012316773645579814910888671875" y="0.068872034549713134765625" />
+                    <sampley x="0.757195055484771728515625" y="-0.8324472904205322265625" />
+                    <sampley x="0.284616410732269287109375" y="0.46815311908721923828125" />
+                    <sampley x="0.24345208704471588134765625" y="0.328806400299072265625" />
+                    <sampley x="-1.73725402355194091796875" y="0.0735456049442291259765625" />
+                    <sampley x="0.684299170970916748046875" y="-0.897519052028656005859375" />
+                    <sampley x="0.3107435405254364013671875" y="-0.72888648509979248046875" />
+                    <sampley x="-0.00244178320281207561492919921875" y="-0.01325125433504581451416015625" />
+                    <sampley x="-0.921274602413177490234375" y="0.3567916452884674072265625" />
+                    <sampley x="-0.835281074047088623046875" y="0.10007689893245697021484375" />
+                    <sampley x="0.0547069124877452850341796875" y="-0.728462874889373779296875" />
+                    <sampley x="-0.5874578952789306640625" y="0.521390378475189208984375" />
+                    <sampley x="-2.66627216339111328125" y="1.3260538578033447265625" />
+                    <sampley x="-0.35817253589630126953125" y="-1.509992122650146484375" />
+                    <sampley x="-0.069938831031322479248046875" y="-0.001409434131346642971038818359375" />
+                    <sampley x="0.40520966053009033203125" y="-0.2509595453739166259765625" />
+                    <sampley x="-0.40053665637969970703125" y="0.096267946064472198486328125" />
+                    <sampley x="0.066750921308994293212890625" y="0.51247918605804443359375" />
+                    <sampley x="-1.00429689884185791015625" y="0.342222690582275390625" />
+                    <sampley x="0.79589164257049560546875" y="2.391224384307861328125" />
+                    <sampley x="-0.11135677993297576904296875" y="0.243655383586883544921875" />
+                    <sampley x="0.3713748455047607421875" y="1.93061316013336181640625" />
+                    <sampley x="0.389052331447601318359375" y="0.78768813610076904296875" />
+                    <sampley x="-1.6937525272369384765625" y="-1.515964508056640625" />
+                    <sampley x="0.012316773645579814910888671875" y="0.068872034549713134765625" />
+                    <sampley x="0.757195055484771728515625" y="-0.8324472904205322265625" />
+                    <sampley x="0.284616410732269287109375" y="0.46815311908721923828125" />
+                    <sampley x="0.24345208704471588134765625" y="0.328806400299072265625" />
+                    <sampley x="-1.73725402355194091796875" y="0.0735456049442291259765625" />
+                    <sampley x="0.684299170970916748046875" y="-0.897519052028656005859375" />
+                    <sampley x="0.3107435405254364013671875" y="-0.72888648509979248046875" />
+                    <sampley x="-0.00244178320281207561492919921875" y="-0.01325125433504581451416015625" />
+                    <sampley x="-0.921274602413177490234375" y="0.3567916452884674072265625" />
+                    <sampley x="-0.835281074047088623046875" y="0.10007689893245697021484375" />
+                    <sampley x="0.0547069124877452850341796875" y="-0.728462874889373779296875" />
+                    <sampley x="-0.5874578952789306640625" y="0.521390378475189208984375" />
+                    <sampley x="-2.66627216339111328125" y="1.3260538578033447265625" />
+                    <sampley x="-0.35817253589630126953125" y="-1.509992122650146484375" />
+                    <sampley x="-0.069938831031322479248046875" y="-0.001409434131346642971038818359375" />
+                    <sampley x="0.40520966053009033203125" y="-0.2509595453739166259765625" />
+                    <sampley x="-0.40053665637969970703125" y="0.096267946064472198486328125" />
+                    <sampley x="0.066750921308994293212890625" y="0.51247918605804443359375" />
+                    <sampley x="-1.00429689884185791015625" y="0.342222690582275390625" />
+                    <sampley x="0.79589164257049560546875" y="2.391224384307861328125" />
+                    <sampley x="-0.11135677993297576904296875" y="0.243655383586883544921875" />
+                    <sampley x="0.3713748455047607421875" y="1.93061316013336181640625" />
+                    <sampley x="0.389052331447601318359375" y="0.78768813610076904296875" />
+                    <sampley x="-1.6937525272369384765625" y="-1.515964508056640625" />
+                    <sampley x="0.012316773645579814910888671875" y="0.068872034549713134765625" />
+                    <sampley x="0.757195055484771728515625" y="-0.8324472904205322265625" />
+                    <sampley x="0.284616410732269287109375" y="0.46815311908721923828125" />
+                    <sampley x="0.24345208704471588134765625" y="0.328806400299072265625" />
+                    <sampley x="-1.73725402355194091796875" y="0.0735456049442291259765625" />
+                    <sampley x="0.684299170970916748046875" y="-0.897519052028656005859375" />
+                    <sampley x="0.3107435405254364013671875" y="-0.72888648509979248046875" />
+                    <sampley x="-0.00244178320281207561492919921875" y="-0.01325125433504581451416015625" />
+                    <sampley x="-0.921274602413177490234375" y="0.3567916452884674072265625" />
+                    <sampley x="-0.835281074047088623046875" y="0.10007689893245697021484375" />
+                    <sampley x="0.0547069124877452850341796875" y="-0.728462874889373779296875" />
+                    <sampley x="-0.5874578952789306640625" y="0.521390378475189208984375" />
+                    <sampley x="-2.66627216339111328125" y="1.3260538578033447265625" />
+                    <sampley x="-0.35817253589630126953125" y="-1.509992122650146484375" />
+                    <sampley x="-0.069938831031322479248046875" y="-0.001409434131346642971038818359375" />
+                    <sampley x="0.40520966053009033203125" y="-0.2509595453739166259765625" />
+                    <sampley x="-0.40053665637969970703125" y="0.096267946064472198486328125" />
+                    <sampley x="0.066750921308994293212890625" y="0.51247918605804443359375" />
+                    <sampley x="-1.00429689884185791015625" y="0.342222690582275390625" />
+                    <sampley x="0.79589164257049560546875" y="2.391224384307861328125" />
+                    <sampley x="-0.11135677993297576904296875" y="0.243655383586883544921875" />
+                    <sampley x="0.3713748455047607421875" y="1.93061316013336181640625" />
+                    <sampley x="0.389052331447601318359375" y="0.78768813610076904296875" />
+                    <sampley x="-1.6937525272369384765625" y="-1.515964508056640625" />
+                    <sampley x="0.012316773645579814910888671875" y="0.068872034549713134765625" />
+                    <sampley x="0.757195055484771728515625" y="-0.8324472904205322265625" />
+                    <sampley x="0.284616410732269287109375" y="0.46815311908721923828125" />
+                    <sampley x="0.24345208704471588134765625" y="0.328806400299072265625" />
+                    <sampley x="-1.73725402355194091796875" y="0.0735456049442291259765625" />
+                    <sampley x="0.684299170970916748046875" y="-0.897519052028656005859375" />
+                    <sampley x="0.3107435405254364013671875" y="-0.72888648509979248046875" />
+                    <sampley x="-0.00244178320281207561492919921875" y="-0.01325125433504581451416015625" />
+                    <sampley x="-0.921274602413177490234375" y="0.3567916452884674072265625" />
+                    <sampley x="-0.835281074047088623046875" y="0.10007689893245697021484375" />
+                    <sampley x="0.0547069124877452850341796875" y="-0.728462874889373779296875" />
+                    <sampley x="-0.5874578952789306640625" y="0.521390378475189208984375" />
+                    <sampley x="-2.66627216339111328125" y="1.3260538578033447265625" />
+                    <sampley x="-0.35817253589630126953125" y="-1.509992122650146484375" />
+                    <sampley x="-0.069938831031322479248046875" y="-0.001409434131346642971038818359375" />
+                    <sampley x="0.40520966053009033203125" y="-0.2509595453739166259765625" />
+                    <sampley x="-0.40053665637969970703125" y="0.096267946064472198486328125" />
+                    <sampley x="0.066750921308994293212890625" y="0.51247918605804443359375" />
+                    <sampley x="-1.00429689884185791015625" y="0.342222690582275390625" />
+                    <sampley x="0.79589164257049560546875" y="2.391224384307861328125" />
+                    <sampley x="-0.11135677993297576904296875" y="0.243655383586883544921875" />
+                    <sampley x="0.3713748455047607421875" y="1.93061316013336181640625" />
+                    <sampley x="0.389052331447601318359375" y="0.78768813610076904296875" />
+                    <sampley x="-1.6937525272369384765625" y="-1.515964508056640625" />
+                    <sampley x="0.012316773645579814910888671875" y="0.068872034549713134765625" />
+                    <sampley x="0.757195055484771728515625" y="-0.8324472904205322265625" />
+                    <sampley x="0.284616410732269287109375" y="0.46815311908721923828125" />
+                    <sampley x="0.24345208704471588134765625" y="0.328806400299072265625" />
+                    <sampley x="-1.73725402355194091796875" y="0.0735456049442291259765625" />
+                    <sampley x="0.684299170970916748046875" y="-0.897519052028656005859375" />
+                    <sampley x="0.3107435405254364013671875" y="-0.72888648509979248046875" />
+                    <sampley x="-0.00244178320281207561492919921875" y="-0.01325125433504581451416015625" />
+                    <sampley x="-0.921274602413177490234375" y="0.3567916452884674072265625" />
+                    <sampley x="-0.835281074047088623046875" y="0.10007689893245697021484375" />
+                    <sampley x="0.0547069124877452850341796875" y="-0.728462874889373779296875" />
+                    <sampley x="-0.5874578952789306640625" y="0.521390378475189208984375" />
+                    <sampley x="-2.66627216339111328125" y="1.3260538578033447265625" />
+                    <sampley x="-0.35817253589630126953125" y="-1.509992122650146484375" />
+                    <sampley x="-0.069938831031322479248046875" y="-0.001409434131346642971038818359375" />
+                    <sampley x="0.40520966053009033203125" y="-0.2509595453739166259765625" />
+                    <sampley x="-0.40053665637969970703125" y="0.096267946064472198486328125" />
+                    <sampley x="0.066750921308994293212890625" y="0.51247918605804443359375" />
                 </samplesy>
                 <PortGroups>
                     <PortGroup content="default" key="vectorField" />
                 </PortGroups>
                 <OutPorts>
-                    <OutPort type="org.inviwo.ImageOutport" identifier="vectorField" id="ref3" />
+                    <OutPort type="org.inviwo.Image.outport" identifier="vectorField" id="ref4" />
                 </OutPorts>
                 <Properties>
                     <Property type="org.inviwo.IntVec2Property" identifier="size">
@@ -306,7 +1065,7 @@
                         <value content="24" />
                     </Property>
                     <Property type="org.inviwo.FloatProperty" identifier="shape" />
-                    <Property type="org.inviwo.Gaussian1DProperty" identifier="gaussian">
+                    <Property type="org.inviwo.CompositeProperty" identifier="gaussian">
                         <Properties>
                             <Property type="org.inviwo.DoubleProperty" identifier="height_" />
                             <Property type="org.inviwo.DoubleProperty" identifier="sigma">
@@ -334,12 +1093,12 @@
                     </MetaDataItem>
                 </MetaDataMap>
             </Processor>
-            <Processor type="org.inviwo.NoiseProcessor" identifier="Noise Processor">
+            <Processor type="org.inviwo.NoiseProcessor" identifier="Noise Processor" displayName="Noise Generator 2D">
                 <PortGroups>
                     <PortGroup content="default" key="noise" />
                 </PortGroups>
                 <OutPorts>
-                    <OutPort type="org.inviwo.ImageOutport" identifier="noise" id="ref10" />
+                    <OutPort type="org.inviwo.Image.outport" identifier="noise" id="ref23" />
                 </OutPorts>
                 <Properties>
                     <Property type="org.inviwo.IntSize2Property" identifier="size">
@@ -387,39 +1146,79 @@
                     </MetaDataItem>
                 </MetaDataMap>
             </Processor>
-            <Processor type="org.inviwo.LineIntegralConvolution" identifier="Line Integral Convolution">
+            <Processor type="org.inviwo.TNM067GlyphRenderer" identifier="Glyph Renderer" displayName="Glyph Renderer">
                 <PortGroups>
-                    <PortGroup content="default" key="noise" />
+                    <PortGroup content="default" key="background" />
                     <PortGroup content="default" key="outport" />
                     <PortGroup content="default" key="vf" />
                 </PortGroups>
                 <InPorts>
-                    <InPort type="org.inviwo.ImageInport" identifier="vf" id="ref0" />
-                    <InPort type="org.inviwo.ImageInport" identifier="noise" id="ref1" />
+                    <InPort type="org.inviwo.Image.inport" identifier="background" id="ref31" />
+                    <InPort type="org.inviwo.Image.inport" identifier="vf" id="ref32" />
                 </InPorts>
                 <OutPorts>
-                    <OutPort type="org.inviwo.ImageOutport" identifier="outport" id="ref2" />
+                    <OutPort type="org.inviwo.Image.outport" identifier="outport" id="ref33" />
                 </OutPorts>
                 <Properties>
-                    <Property type="org.inviwo.IntProperty" identifier="steps" />
-                    <Property type="org.inviwo.FloatProperty" identifier="stepSize">
-                        <value content="0.0029809" />
+                    <Property type="org.inviwo.FloatProperty" identifier="glyphScale">
+                        <MetaDataMap>
+                            <MetaDataItem type="org.inviwo.StringStringStdUnorderedMapMetaData" key="SavedState" />
+                        </MetaDataMap>
+                        <value content="0.208" />
+                    </Property>
+                    <Property type="org.inviwo.Size_tProperty" identifier="gridSize">
+                        <value content="20" />
+                    </Property>
+                    <Property type="org.inviwo.BoolProperty" identifier="includeGrid" />
+                    <Property type="org.inviwo.BoolProperty" identifier="includeMousePos_">
+                        <value content="1" />
+                    </Property>
+                    <Property type="org.inviwo.EventProperty" identifier="mouseMoveEvent">
+                        <Event />
                     </Property>
                 </Properties>
                 <MetaDataMap>
                     <MetaDataItem type="org.inviwo.ProcessorMetaData" key="org.inviwo.ProcessorMetaData">
-                        <position x="-225" y="-175" />
+                        <position x="-750" y="75" />
                         <visibility content="1" />
                         <selection content="0" />
                     </MetaDataItem>
                 </MetaDataMap>
             </Processor>
-            <Processor type="org.inviwo.CanvasGL" identifier="Canvas 3">
+            <Processor type="org.inviwo.Mesh2DRenderProcessorGL" identifier="2D Mesh Renderer" displayName="2D Mesh Renderer">
+                <PortGroups>
+                    <PortGroup content="default" key="imageInport" />
+                    <PortGroup content="default" key="inputMesh" />
+                    <PortGroup content="default" key="outputImage" />
+                </PortGroups>
+                <InPorts>
+                    <InPort type="org.inviwo.Mesh.flat.multi.inport" identifier="inputMesh" id="ref2" />
+                    <InPort type="org.inviwo.Image.inport" identifier="imageInport" />
+                </InPorts>
+                <OutPorts>
+                    <OutPort type="org.inviwo.Image.outport" identifier="outputImage" id="ref3" />
+                </OutPorts>
+                <Properties>
+                    <Property type="org.inviwo.BoolProperty" identifier="enableDepthTest" />
+                    <Property type="org.inviwo.FloatProperty" identifier="left" />
+                    <Property type="org.inviwo.FloatProperty" identifier="right" />
+                    <Property type="org.inviwo.FloatProperty" identifier="bottom" />
+                    <Property type="org.inviwo.FloatProperty" identifier="top" />
+                </Properties>
+                <MetaDataMap>
+                    <MetaDataItem type="org.inviwo.ProcessorMetaData" key="org.inviwo.ProcessorMetaData">
+                        <position x="-700" y="-150" />
+                        <visibility content="1" />
+                        <selection content="0" />
+                    </MetaDataItem>
+                </MetaDataMap>
+            </Processor>
+            <Processor type="org.inviwo.CanvasGL" identifier="Canvas 3" displayName="Canvas">
                 <PortGroups>
                     <PortGroup content="default" key="inport" />
                 </PortGroups>
                 <InPorts>
-                    <InPort type="org.inviwo.ImageInport" identifier="inport" id="ref7" />
+                    <InPort type="org.inviwo.Image.inport" identifier="inport" id="ref16" />
                 </InPorts>
                 <Properties>
                     <Property type="org.inviwo.CompositeProperty" identifier="inputSize">
@@ -429,16 +1228,21 @@
                                 <value content="1" />
                             </Property>
                             <Property type="org.inviwo.IntVec2Property" identifier="customInputDimensions">
+                                <visible content="1" />
                                 <readonly content="1" />
                                 <value x="600" y="600" />
                             </Property>
-                            <Property type="org.inviwo.BoolProperty" identifier="keepAspectRatio" />
-                            <Property type="org.inviwo.FloatProperty" identifier="aspectRatioScaling" />
+                            <Property type="org.inviwo.BoolProperty" identifier="keepAspectRatio">
+                                <visible content="1" />
+                            </Property>
+                            <Property type="org.inviwo.FloatProperty" identifier="aspectRatioScaling">
+                                <visible content="1" />
+                            </Property>
                         </Properties>
                         <collapsed content="0" />
                     </Property>
                     <Property type="org.inviwo.IntVec2Property" identifier="position">
-                        <value x="29" y="222" />
+                        <value x="1456" y="568" />
                     </Property>
                     <Property type="org.inviwo.OptionPropertyEnumInt" identifier="visibleLayer" />
                     <Property type="org.inviwo.IntProperty" identifier="colorLayer_">
@@ -456,20 +1260,21 @@
                         <absolutePath content="" />
                         <workspaceRelativePath content="" />
                         <ivwdataRelativePath content="" />
-                        <nameFilter>
-                            <filter>
-                                <extension content="*" />
-                                <description content="All Files" />
-                            </filter>
-                        </nameFilter>
+                        <selectedExtension>
+                            <extension content="*" />
+                            <description content="All Files" />
+                        </selectedExtension>
                         <acceptMode content="0" />
                         <fileMode content="4" />
                     </Property>
                     <Property type="org.inviwo.OptionPropertyString" identifier="fileExt" />
                     <Property type="org.inviwo.ButtonProperty" identifier="saveLayer" />
                     <Property type="org.inviwo.ButtonProperty" identifier="saveLayerToFile" />
-                    <Property type="org.inviwo.ButtonProperty" identifier="toggleFullscreen" />
-                    <Property type="org.inviwo.EventProperty" identifier="fullscreen">
+                    <Property type="org.inviwo.BoolProperty" identifier="fullscreen" />
+                    <Property type="org.inviwo.EventProperty" identifier="fullscreenEvent">
+                        <Event />
+                    </Property>
+                    <Property type="org.inviwo.EventProperty" identifier="saveLayerEvent">
                         <Event />
                     </Property>
                     <Property type="org.inviwo.BoolProperty" identifier="allowContextMenu" />
@@ -481,89 +1286,22 @@
                         <selection content="0" />
                     </MetaDataItem>
                     <MetaDataItem type="org.inviwo.ProcessorWidgetMetaData" key="org.inviwo.ProcessorWidgetMetaData">
-                        <position x="29" y="222" />
+                        <position x="1456" y="568" />
                         <dimensions x="600" y="600" />
-                        <visibility content="1" />
+                        <visibility content="0" />
                     </MetaDataItem>
                 </MetaDataMap>
             </Processor>
-            <Processor type="org.inviwo.TNM067GlyphRenderer" identifier="Glyph Renderer">
-                <PortGroups>
-                    <PortGroup content="default" key="background" />
-                    <PortGroup content="default" key="outport" />
-                    <PortGroup content="default" key="vf" />
-                </PortGroups>
-                <InPorts>
-                    <InPort type="org.inviwo.ImageInport" identifier="background" id="ref4" />
-                    <InPort type="org.inviwo.ImageInport" identifier="vf" id="ref5" />
-                </InPorts>
-                <OutPorts>
-                    <OutPort type="org.inviwo.ImageOutport" identifier="outport" id="ref6" />
-                </OutPorts>
-                <Properties>
-                    <Property type="org.inviwo.FloatProperty" identifier="glyphScale">
-                        <MetaDataMap>
-                            <MetaDataItem type="org.inviwo.StringStringStdUnorderedMapMetaData" key="SavedState" />
-                        </MetaDataMap>
-                        <value content="1.098" />
-                    </Property>
-                    <Property type="org.inviwo.Size_tProperty" identifier="gridSize">
-                        <value content="9" />
-                    </Property>
-                    <Property type="org.inviwo.BoolProperty" identifier="includeGrid" />
-                    <Property type="org.inviwo.BoolProperty" identifier="includeMousePos_">
-                        <value content="1" />
-                    </Property>
-                    <Property type="org.inviwo.EventProperty" identifier="mouseMoveEvent">
-                        <Event />
-                    </Property>
-                </Properties>
-                <MetaDataMap>
-                    <MetaDataItem type="org.inviwo.ProcessorMetaData" key="org.inviwo.ProcessorMetaData">
-                        <position x="-750" y="75" />
-                        <visibility content="1" />
-                        <selection content="1" />
-                    </MetaDataItem>
-                </MetaDataMap>
-            </Processor>
-            <Processor type="org.inviwo.Mesh2DRenderProcessorGL" identifier="2D Mesh Renderer">
-                <PortGroups>
-                    <PortGroup content="default" key="imageInport" />
-                    <PortGroup content="default" key="inputMesh" />
-                    <PortGroup content="default" key="outputImage" />
-                </PortGroups>
-                <InPorts>
-                    <InPort type="org.inviwo.MeshFlatMultiInport" identifier="inputMesh" id="ref8" />
-                    <InPort type="org.inviwo.ImageInport" identifier="imageInport" />
-                </InPorts>
-                <OutPorts>
-                    <OutPort type="org.inviwo.ImageOutport" identifier="outputImage" id="ref9" />
-                </OutPorts>
-                <Properties>
-                    <Property type="org.inviwo.BoolProperty" identifier="enableDepthTest" />
-                    <Property type="org.inviwo.FloatProperty" identifier="left" />
-                    <Property type="org.inviwo.FloatProperty" identifier="right" />
-                    <Property type="org.inviwo.FloatProperty" identifier="bottom" />
-                    <Property type="org.inviwo.FloatProperty" identifier="top" />
-                </Properties>
-                <MetaDataMap>
-                    <MetaDataItem type="org.inviwo.ProcessorMetaData" key="org.inviwo.ProcessorMetaData">
-                        <position x="-700" y="-150" />
-                        <visibility content="1" />
-                        <selection content="0" />
-                    </MetaDataItem>
-                </MetaDataMap>
-            </Processor>
-            <Processor type="org.inviwo.Background" identifier="Background">
+            <Processor type="org.inviwo.Background" identifier="Background" displayName="Background">
                 <PortGroups>
                     <PortGroup content="default" key="inport" />
                     <PortGroup content="default" key="outport" />
                 </PortGroups>
                 <InPorts>
-                    <InPort type="org.inviwo.ImageInport" identifier="inport" id="ref11" />
+                    <InPort type="org.inviwo.Image.inport" identifier="inport" id="ref0" />
                 </InPorts>
                 <OutPorts>
-                    <OutPort type="org.inviwo.ImageOutport" identifier="outport" id="ref12" />
+                    <OutPort type="org.inviwo.Image.outport" identifier="outport" id="ref1" />
                 </OutPorts>
                 <Properties>
                     <Property type="org.inviwo.OptionPropertyEnumInt" identifier="backgroundStyle">
@@ -591,16 +1329,16 @@
                     </MetaDataItem>
                 </MetaDataMap>
             </Processor>
-            <Processor type="org.inviwo.HedgeHog2D" identifier="Hedge Hog 2D">
+            <Processor type="org.inviwo.HedgeHog2D" identifier="Hedge Hog 2D" displayName="Hedge Hog 2D">
                 <PortGroups>
                     <PortGroup content="default" key="mesh" />
                     <PortGroup content="default" key="vectorFeild" />
                 </PortGroups>
                 <InPorts>
-                    <InPort type="org.inviwo.ImageInport" identifier="vectorFeild" id="ref13" />
+                    <InPort type="org.inviwo.Image.inport" identifier="vectorFeild" id="ref25" />
                 </InPorts>
                 <OutPorts>
-                    <OutPort type="org.inviwo.MeshOutport" identifier="mesh" id="ref14" />
+                    <OutPort type="org.inviwo.Mesh.outport" identifier="mesh" id="ref26" />
                 </OutPorts>
                 <Properties>
                     <Property type="org.inviwo.FloatVec4Property" identifier="color" />
@@ -619,7 +1357,6 @@
                         <collapsed content="0" />
                     </Property>
                     <Property type="org.inviwo.CompositeProperty" identifier="quiverSettings">
-                        <visible content="0" />
                         <Properties>
                             <Property type="org.inviwo.FloatProperty" identifier="hookWidth" />
                             <Property type="org.inviwo.FloatProperty" identifier="headRatio" />
@@ -635,22 +1372,22 @@
                     </MetaDataItem>
                 </MetaDataMap>
             </Processor>
-            <Processor type="org.inviwo.VectorFieldInformation" identifier="Vector Field Information">
+            <Processor type="org.inviwo.VectorFieldInformation" identifier="Vector Field Information" displayName="Vector Field Information">
                 <PortGroups>
                     <PortGroup content="default" key="outport" />
                     <PortGroup content="default" key="vf" />
                 </PortGroups>
                 <InPorts>
-                    <InPort type="org.inviwo.ImageInport" identifier="vf" id="ref15" />
+                    <InPort type="org.inviwo.Image.inport" identifier="vf" id="ref9" />
                 </InPorts>
                 <OutPorts>
-                    <OutPort type="org.inviwo.ImageOutport" identifier="outport" id="ref16" />
+                    <OutPort type="org.inviwo.Image.outport" identifier="outport" id="ref10" />
                 </OutPorts>
                 <Properties>
                     <Property type="org.inviwo.OptionPropertyEnumInt" identifier="outputType">
                         <selectedIdentifier content="rotation" />
                     </Property>
-                    <Property type="org.inviwo.StringProperty" identifier="outputTypeStr" id="ref17">
+                    <Property type="org.inviwo.StringProperty" identifier="outputTypeStr" id="ref11">
                         <readonly content="1" />
                         <value content="Rotation" />
                     </Property>
@@ -663,16 +1400,16 @@
                     </MetaDataItem>
                 </MetaDataMap>
             </Processor>
-            <Processor type="org.inviwo.ImageLayoutGL" identifier="Image Layout">
+            <Processor type="org.inviwo.ImageLayoutGL" identifier="Image Layout" displayName="Image Layout">
                 <PortGroups>
                     <PortGroup content="default" key="multiinport" />
                     <PortGroup content="default" key="outport" />
                 </PortGroups>
                 <InPorts>
-                    <InPort type="org.inviwo.ImageMultiInport" identifier="multiinport" id="ref18" />
+                    <InPort type="org.inviwo.Image.multi.inport" identifier="multiinport" id="ref21" />
                 </InPorts>
                 <OutPorts>
-                    <OutPort type="org.inviwo.ImageOutport" identifier="outport" id="ref19" />
+                    <OutPort type="org.inviwo.Image.outport" identifier="outport" id="ref22" />
                 </OutPorts>
                 <Properties>
                     <Property type="org.inviwo.OptionPropertyEnumInt" identifier="layout" />
@@ -697,12 +1434,12 @@
                     </MetaDataItem>
                 </MetaDataMap>
             </Processor>
-            <Processor type="org.inviwo.CanvasGL" identifier="Canvas">
+            <Processor type="org.inviwo.CanvasGL" identifier="Canvas" displayName="Canvas">
                 <PortGroups>
                     <PortGroup content="default" key="inport" />
                 </PortGroups>
                 <InPorts>
-                    <InPort type="org.inviwo.ImageInport" identifier="inport" id="ref20" />
+                    <InPort type="org.inviwo.Image.inport" identifier="inport" id="ref15" />
                 </InPorts>
                 <Properties>
                     <Property type="org.inviwo.CompositeProperty" identifier="inputSize">
@@ -712,11 +1449,15 @@
                                 <value content="1" />
                             </Property>
                             <Property type="org.inviwo.IntVec2Property" identifier="customInputDimensions">
+                                <visible content="1" />
                                 <readonly content="1" />
                                 <value x="1800" y="1800" />
                             </Property>
-                            <Property type="org.inviwo.BoolProperty" identifier="keepAspectRatio" />
+                            <Property type="org.inviwo.BoolProperty" identifier="keepAspectRatio">
+                                <visible content="1" />
+                            </Property>
                             <Property type="org.inviwo.FloatProperty" identifier="aspectRatioScaling">
+                                <visible content="1" />
                                 <value content="2" />
                             </Property>
                         </Properties>
@@ -741,20 +1482,21 @@
                         <absolutePath content="" />
                         <workspaceRelativePath content="" />
                         <ivwdataRelativePath content="" />
-                        <nameFilter>
-                            <filter>
-                                <extension content="*" />
-                                <description content="All Files" />
-                            </filter>
-                        </nameFilter>
+                        <selectedExtension>
+                            <extension content="*" />
+                            <description content="All Files" />
+                        </selectedExtension>
                         <acceptMode content="0" />
                         <fileMode content="4" />
                     </Property>
                     <Property type="org.inviwo.OptionPropertyString" identifier="fileExt" />
                     <Property type="org.inviwo.ButtonProperty" identifier="saveLayer" />
                     <Property type="org.inviwo.ButtonProperty" identifier="saveLayerToFile" />
-                    <Property type="org.inviwo.ButtonProperty" identifier="toggleFullscreen" />
-                    <Property type="org.inviwo.EventProperty" identifier="fullscreen">
+                    <Property type="org.inviwo.BoolProperty" identifier="fullscreen" />
+                    <Property type="org.inviwo.EventProperty" identifier="fullscreenEvent">
+                        <Event />
+                    </Property>
+                    <Property type="org.inviwo.EventProperty" identifier="saveLayerEvent">
                         <Event />
                     </Property>
                     <Property type="org.inviwo.BoolProperty" identifier="allowContextMenu" />
@@ -768,20 +1510,20 @@
                     <MetaDataItem type="org.inviwo.ProcessorWidgetMetaData" key="org.inviwo.ProcessorWidgetMetaData">
                         <position x="863" y="645" />
                         <dimensions x="900" y="900" />
-                        <visibility content="1" />
+                        <visibility content="0" />
                     </MetaDataItem>
                 </MetaDataMap>
             </Processor>
-            <Processor type="org.inviwo.TextOverlayGL" identifier="Text Overlay">
+            <Processor type="org.inviwo.TextOverlayGL" identifier="Text Overlay" displayName="Text Overlay">
                 <PortGroups>
                     <PortGroup content="default" key="inport" />
                     <PortGroup content="default" key="outport" />
                 </PortGroups>
                 <InPorts>
-                    <InPort type="org.inviwo.ImageInport" identifier="inport" id="ref25" />
+                    <InPort type="org.inviwo.Image.inport" identifier="inport" id="ref34" />
                 </InPorts>
                 <OutPorts>
-                    <OutPort type="org.inviwo.ImageOutport" identifier="outport" id="ref26" />
+                    <OutPort type="org.inviwo.Image.outport" identifier="outport" id="ref35" />
                 </OutPorts>
                 <Properties>
                     <Property type="org.inviwo.BoolProperty" identifier="enable" />
@@ -794,9 +1536,10 @@
                     <Property type="org.inviwo.FontProperty" identifier="font">
                         <Properties>
                             <Property type="org.inviwo.OptionPropertyString" identifier="fontFace" />
-                            <Property type="org.inviwo.OptionPropertyInt" identifier="fontSize">
-                                <selectedIdentifier content="60" />
+                            <Property type="org.inviwo.IntProperty" identifier="fontSize">
+                                <value content="60" />
                             </Property>
+                            <Property type="org.inviwo.FloatProperty" identifier="lineSpacing" />
                             <Property type="org.inviwo.FloatVec2Property" identifier="anchor" />
                         </Properties>
                         <collapsed content="0" />
@@ -804,6 +1547,7 @@
                     <Property type="org.inviwo.FloatVec2Property" identifier="position">
                         <value x="0.0097000003" y="0" />
                     </Property>
+                    <Property type="org.inviwo.IntVec2Property" identifier="offset" />
                     <Property type="org.inviwo.ButtonProperty" identifier="addArgBtn" />
                 </Properties>
                 <MetaDataMap>
@@ -814,16 +1558,16 @@
                     </MetaDataItem>
                 </MetaDataMap>
             </Processor>
-            <Processor type="org.inviwo.TextOverlayGL" identifier="Text Overlay 2">
+            <Processor type="org.inviwo.TextOverlayGL" identifier="Text Overlay 2" displayName="Text Overlay">
                 <PortGroups>
                     <PortGroup content="default" key="inport" />
                     <PortGroup content="default" key="outport" />
                 </PortGroups>
                 <InPorts>
-                    <InPort type="org.inviwo.ImageInport" identifier="inport" id="ref23" />
+                    <InPort type="org.inviwo.Image.inport" identifier="inport" id="ref29" />
                 </InPorts>
                 <OutPorts>
-                    <OutPort type="org.inviwo.ImageOutport" identifier="outport" id="ref24" />
+                    <OutPort type="org.inviwo.Image.outport" identifier="outport" id="ref30" />
                 </OutPorts>
                 <Properties>
                     <Property type="org.inviwo.BoolProperty" identifier="enable" />
@@ -834,9 +1578,10 @@
                     <Property type="org.inviwo.FontProperty" identifier="font">
                         <Properties>
                             <Property type="org.inviwo.OptionPropertyString" identifier="fontFace" />
-                            <Property type="org.inviwo.OptionPropertyInt" identifier="fontSize">
-                                <selectedIdentifier content="48" />
+                            <Property type="org.inviwo.IntProperty" identifier="fontSize">
+                                <value content="48" />
                             </Property>
+                            <Property type="org.inviwo.FloatProperty" identifier="lineSpacing" />
                             <Property type="org.inviwo.FloatVec2Property" identifier="anchor">
                                 <value x="-1" y="1" />
                             </Property>
@@ -846,6 +1591,7 @@
                     <Property type="org.inviwo.FloatVec2Property" identifier="position">
                         <value x="0.0099999998" y="0.99000001" />
                     </Property>
+                    <Property type="org.inviwo.IntVec2Property" identifier="offset" />
                     <Property type="org.inviwo.ButtonProperty" identifier="addArgBtn" />
                 </Properties>
                 <MetaDataMap>
@@ -856,16 +1602,16 @@
                     </MetaDataItem>
                 </MetaDataMap>
             </Processor>
-            <Processor type="org.inviwo.TextOverlayGL" identifier="Text Overlay 3">
+            <Processor type="org.inviwo.TextOverlayGL" identifier="Text Overlay 3" displayName="Text Overlay">
                 <PortGroups>
                     <PortGroup content="default" key="inport" />
                     <PortGroup content="default" key="outport" />
                 </PortGroups>
                 <InPorts>
-                    <InPort type="org.inviwo.ImageInport" identifier="inport" id="ref21" />
+                    <InPort type="org.inviwo.Image.inport" identifier="inport" id="ref27" />
                 </InPorts>
                 <OutPorts>
-                    <OutPort type="org.inviwo.ImageOutport" identifier="outport" id="ref22" />
+                    <OutPort type="org.inviwo.Image.outport" identifier="outport" id="ref28" />
                 </OutPorts>
                 <Properties>
                     <Property type="org.inviwo.BoolProperty" identifier="enable" />
@@ -878,9 +1624,10 @@
                     <Property type="org.inviwo.FontProperty" identifier="font">
                         <Properties>
                             <Property type="org.inviwo.OptionPropertyString" identifier="fontFace" />
-                            <Property type="org.inviwo.OptionPropertyInt" identifier="fontSize">
-                                <selectedIdentifier content="72" />
+                            <Property type="org.inviwo.IntProperty" identifier="fontSize">
+                                <value content="72" />
                             </Property>
+                            <Property type="org.inviwo.FloatProperty" identifier="lineSpacing" />
                             <Property type="org.inviwo.FloatVec2Property" identifier="anchor">
                                 <value x="0.92000002" y="1" />
                             </Property>
@@ -890,6 +1637,7 @@
                     <Property type="org.inviwo.FloatVec2Property" identifier="position">
                         <value x="0.99000001" y="0.99000001" />
                     </Property>
+                    <Property type="org.inviwo.IntVec2Property" identifier="offset" />
                     <Property type="org.inviwo.ButtonProperty" identifier="addArgBtn" />
                 </Properties>
                 <MetaDataMap>
@@ -900,16 +1648,62 @@
                     </MetaDataItem>
                 </MetaDataMap>
             </Processor>
-            <Processor type="org.inviwo.VolumeSlice" identifier="HurricaneIsabel">
+            <Processor type="org.inviwo.TextOverlayGL" identifier="Text Overlay 4" displayName="Text Overlay">
+                <PortGroups>
+                    <PortGroup content="default" key="inport" />
+                    <PortGroup content="default" key="outport" />
+                </PortGroups>
+                <InPorts>
+                    <InPort type="org.inviwo.Image.inport" identifier="inport" id="ref12" />
+                </InPorts>
+                <OutPorts>
+                    <OutPort type="org.inviwo.Image.outport" identifier="outport" id="ref13" />
+                </OutPorts>
+                <Properties>
+                    <Property type="org.inviwo.BoolProperty" identifier="enable" />
+                    <Property type="org.inviwo.StringProperty" identifier="text" id="ref14">
+                        <value content="Rotation" />
+                    </Property>
+                    <Property type="org.inviwo.FloatVec4Property" identifier="color">
+                        <value x="0" y="0" z="0" w="1" />
+                    </Property>
+                    <Property type="org.inviwo.FontProperty" identifier="font">
+                        <Properties>
+                            <Property type="org.inviwo.OptionPropertyString" identifier="fontFace" />
+                            <Property type="org.inviwo.IntProperty" identifier="fontSize">
+                                <value content="48" />
+                            </Property>
+                            <Property type="org.inviwo.FloatProperty" identifier="lineSpacing" />
+                            <Property type="org.inviwo.FloatVec2Property" identifier="anchor">
+                                <value x="1" y="-1" />
+                            </Property>
+                        </Properties>
+                        <collapsed content="0" />
+                    </Property>
+                    <Property type="org.inviwo.FloatVec2Property" identifier="position">
+                        <value x="0.99000001" y="0.0099999998" />
+                    </Property>
+                    <Property type="org.inviwo.IntVec2Property" identifier="offset" />
+                    <Property type="org.inviwo.ButtonProperty" identifier="addArgBtn" />
+                </Properties>
+                <MetaDataMap>
+                    <MetaDataItem type="org.inviwo.ProcessorMetaData" key="org.inviwo.ProcessorMetaData">
+                        <position x="-500" y="150" />
+                        <visibility content="1" />
+                        <selection content="0" />
+                    </MetaDataItem>
+                </MetaDataMap>
+            </Processor>
+            <Processor type="org.inviwo.VolumeSlice" identifier="HurricaneIsabel" displayName="Volume Slice">
                 <PortGroups>
                     <PortGroup content="default" key="inputVolume" />
                     <PortGroup content="default" key="outputImage" />
                 </PortGroups>
                 <InPorts>
-                    <InPort type="org.inviwo.VolumeInport" identifier="inputVolume" id="ref30" />
+                    <InPort type="org.inviwo.Volume.inport" identifier="inputVolume" id="ref5" />
                 </InPorts>
                 <OutPorts>
-                    <OutPort type="org.inviwo.ImageOutport" identifier="outputImage" id="ref31" />
+                    <OutPort type="org.inviwo.Image.outport" identifier="outputImage" id="ref6" />
                 </OutPorts>
                 <Properties>
                     <Property type="org.inviwo.OptionPropertyEnumInt" identifier="sliceAxis">
@@ -945,115 +1739,149 @@
                     </MetaDataItem>
                 </MetaDataMap>
             </Processor>
-            <Processor type="org.inviwo.TextOverlayGL" identifier="Text Overlay 4">
-                <PortGroups>
-                    <PortGroup content="default" key="inport" />
-                    <PortGroup content="default" key="outport" />
-                </PortGroups>
-                <InPorts>
-                    <InPort type="org.inviwo.ImageInport" identifier="inport" id="ref27" />
-                </InPorts>
-                <OutPorts>
-                    <OutPort type="org.inviwo.ImageOutport" identifier="outport" id="ref28" />
-                </OutPorts>
-                <Properties>
-                    <Property type="org.inviwo.BoolProperty" identifier="enable" />
-                    <Property type="org.inviwo.StringProperty" identifier="text" id="ref29">
-                        <value content="Rotation" />
-                    </Property>
-                    <Property type="org.inviwo.FloatVec4Property" identifier="color">
-                        <value x="0" y="0" z="0" w="1" />
-                    </Property>
-                    <Property type="org.inviwo.FontProperty" identifier="font">
-                        <Properties>
-                            <Property type="org.inviwo.OptionPropertyString" identifier="fontFace" />
-                            <Property type="org.inviwo.OptionPropertyInt" identifier="fontSize">
-                                <selectedIdentifier content="48" />
-                            </Property>
-                            <Property type="org.inviwo.FloatVec2Property" identifier="anchor">
-                                <value x="1" y="-1" />
-                            </Property>
-                        </Properties>
-                        <collapsed content="0" />
-                    </Property>
-                    <Property type="org.inviwo.FloatVec2Property" identifier="position">
-                        <value x="0.99000001" y="0.0099999998" />
-                    </Property>
-                    <Property type="org.inviwo.ButtonProperty" identifier="addArgBtn" />
-                </Properties>
-                <MetaDataMap>
-                    <MetaDataItem type="org.inviwo.ProcessorMetaData" key="org.inviwo.ProcessorMetaData">
-                        <position x="-500" y="150" />
-                        <visibility content="1" />
-                        <selection content="0" />
-                    </MetaDataItem>
-                </MetaDataMap>
-            </Processor>
-            <Processor type="org.inviwo.VolumeSource" identifier="Volume Source">
+            <Processor type="org.inviwo.VolumeSource" identifier="Volume Source" displayName="Volume Source">
                 <PortGroups>
                     <PortGroup content="default" key="data" />
                 </PortGroups>
                 <OutPorts>
-                    <OutPort type="org.inviwo.VolumeOutport" identifier="data" id="ref32" />
+                    <OutPort type="org.inviwo.Volume.outport" identifier="data" id="ref24" />
                 </OutPorts>
                 <Properties>
                     <Property type="org.inviwo.FileProperty" identifier="filename">
-                        <displayName content="Volume file" />
-                        <absolutePath content="E:/gitlab-itn-master-repo/courses/TNM067/public/tnm067labs/modules/tnm067lab3/data/volumes/UVWf39.dat" />
+                        <absolutePath content="X:/TNM067/tnm067labs/modules/tnm067lab3/data/volumes/UVWf39.dat" />
                         <workspaceRelativePath content="../../../tnm067lab3/data/volumes/UVWf39.dat" />
-                        <ivwdataRelativePath content="../../../gitlab-itn-master-repo/courses/TNM067/public/tnm067labs/modules/tnm067lab3/data/volumes/UVWf39.dat" />
-                        <nameFilter>
-                            <filter>
-                                <extension content="*" />
-                                <description content="All Files" />
-                            </filter>
-                            <filter>
-                                <extension content="ivf" />
-                                <description content="Inviwo ivf file format" />
-                            </filter>
-                            <filter>
-                                <extension content="raw" />
-                                <description content="Raw binary file" />
-                            </filter>
-                            <filter>
-                                <extension content="pvm" />
-                                <description content="PVM file format" />
-                            </filter>
-                            <filter>
-                                <extension content="mpvm" />
-                                <description content="MPVM (Multiple PVMs) file format" />
-                            </filter>
-                            <filter>
-                                <extension content="dat" />
-                                <description content="Inviwo dat file format" />
-                            </filter>
-                            <filter>
-                                <extension content="nii" />
-                                <description content="NIfTI-1 file format" />
-                            </filter>
-                            <filter>
-                                <extension content="hdr" />
-                                <description content="ANALYZE file format" />
-                            </filter>
-                            <filter>
-                                <extension content="img" />
-                                <description content="ANALYZE file format" />
-                            </filter>
-                            <filter>
-                                <extension content="nii.gz" />
-                                <description content="NIfTI-1 file format" />
-                            </filter>
-                            <filter>
-                                <extension content="hdr.gz" />
-                                <description content="ANALYZE file format" />
-                            </filter>
-                            <filter>
-                                <extension content="img.gz" />
-                                <description content="ANALYZE file format" />
-                            </filter>
-                        </nameFilter>
+                        <ivwdataRelativePath content="" />
+                        <selectedExtension>
+                            <extension content="dat" />
+                            <description content="Inviwo dat file format" />
+                        </selectedExtension>
                         <acceptMode content="0" />
                         <fileMode content="0" />
+                    </Property>
+                    <Property type="org.inviwo.OptionPropertyFileExtension" identifier="reader">
+                        <options>
+                            <option>
+                                <id content="ANALYZE file format (*.hdr)" />
+                                <name content="ANALYZE file format (*.hdr)" />
+                                <value>
+                                    <extension content="hdr" />
+                                    <description content="ANALYZE file format" />
+                                </value>
+                            </option>
+                            <option>
+                                <id content="ANALYZE file format (*.hdr.gz)" />
+                                <name content="ANALYZE file format (*.hdr.gz)" />
+                                <value>
+                                    <extension content="hdr.gz" />
+                                    <description content="ANALYZE file format" />
+                                </value>
+                            </option>
+                            <option>
+                                <id content="ANALYZE file format (*.img)" />
+                                <name content="ANALYZE file format (*.img)" />
+                                <value>
+                                    <extension content="img" />
+                                    <description content="ANALYZE file format" />
+                                </value>
+                            </option>
+                            <option>
+                                <id content="ANALYZE file format (*.img.gz)" />
+                                <name content="ANALYZE file format (*.img.gz)" />
+                                <value>
+                                    <extension content="img.gz" />
+                                    <description content="ANALYZE file format" />
+                                </value>
+                            </option>
+                            <option>
+                                <id content="Inviwo dat file format (*.dat)" />
+                                <name content="Inviwo dat file format (*.dat)" />
+                                <value>
+                                    <extension content="dat" />
+                                    <description content="Inviwo dat file format" />
+                                </value>
+                            </option>
+                            <option>
+                                <id content="Inviwo ivf file format (*.ivf)" />
+                                <name content="Inviwo ivf file format (*.ivf)" />
+                                <value>
+                                    <extension content="ivf" />
+                                    <description content="Inviwo ivf file format" />
+                                </value>
+                            </option>
+                            <option>
+                                <id content="MPVM (Multiple PVMs) file format (*.mpvm)" />
+                                <name content="MPVM (Multiple PVMs) file format (*.mpvm)" />
+                                <value>
+                                    <extension content="mpvm" />
+                                    <description content="MPVM (Multiple PVMs) file format" />
+                                </value>
+                            </option>
+                            <option>
+                                <id content="NIfTI-1 file format (*.nii)" />
+                                <name content="NIfTI-1 file format (*.nii)" />
+                                <value>
+                                    <extension content="nii" />
+                                    <description content="NIfTI-1 file format" />
+                                </value>
+                            </option>
+                            <option>
+                                <id content="NIfTI-1 file format (*.nii.gz)" />
+                                <name content="NIfTI-1 file format (*.nii.gz)" />
+                                <value>
+                                    <extension content="nii.gz" />
+                                    <description content="NIfTI-1 file format" />
+                                </value>
+                            </option>
+                            <option>
+                                <id content="PVM file format (*.pvm)" />
+                                <name content="PVM file format (*.pvm)" />
+                                <value>
+                                    <extension content="pvm" />
+                                    <description content="PVM file format" />
+                                </value>
+                            </option>
+                            <option>
+                                <id content="Raw binary file (*.raw)" />
+                                <name content="Raw binary file (*.raw)" />
+                                <value>
+                                    <extension content="raw" />
+                                    <description content="Raw binary file" />
+                                </value>
+                            </option>
+                            <option>
+                                <id content="Sequence of Inviwo ivf volumes (*.ivfs)" />
+                                <name content="Sequence of Inviwo ivf volumes (*.ivfs)" />
+                                <value>
+                                    <extension content="ivfs" />
+                                    <description content="Sequence of Inviwo ivf volumes" />
+                                </value>
+                            </option>
+                            <option>
+                                <id content="TIFF Stack (*.tif)" />
+                                <name content="TIFF Stack (*.tif)" />
+                                <value>
+                                    <extension content="tif" />
+                                    <description content="TIFF Stack" />
+                                </value>
+                            </option>
+                            <option>
+                                <id content="TIFF Stack (*.tiff)" />
+                                <name content="TIFF Stack (*.tiff)" />
+                                <value>
+                                    <extension content="tiff" />
+                                    <description content="TIFF Stack" />
+                                </value>
+                            </option>
+                            <option>
+                                <id content="noreader" />
+                                <name content="No available reader" />
+                                <value>
+                                    <extension content="" />
+                                    <description content="" />
+                                </value>
+                            </option>
+                        </options>
+                        <selectedIdentifier content="Inviwo dat file format (*.dat)" />
                     </Property>
                     <Property type="org.inviwo.ButtonProperty" identifier="reload" />
                     <Property type="org.inviwo.VolumeInformationProperty" identifier="Information">
@@ -1096,56 +1924,24 @@
                         <collapsed content="0" />
                     </Property>
                     <Property type="org.inviwo.VolumeBasisProperty" identifier="Basis">
+                        <overrideModel>
+                            <col0 x="2139" y="0" z="0" w="0" />
+                            <col1 x="0" y="2004" z="0" w="0" />
+                            <col2 x="0" y="0" z="20.184999" w="0" />
+                            <col3 x="-1069.5" y="-1002" z="-10.0925" w="1" />
+                        </overrideModel>
                         <Properties>
+                            <Property type="org.inviwo.OptionPropertyEnumInt" identifier="mode" />
+                            <Property type="org.inviwo.OptionPropertyEnumInt" identifier="reference" />
                             <Property type="org.inviwo.BoolProperty" identifier="override" />
+                            <Property type="org.inviwo.BoolProperty" identifier="update" />
+                            <Property type="org.inviwo.FloatVec3Property" identifier="size" />
                             <Property type="org.inviwo.FloatVec3Property" identifier="a" />
                             <Property type="org.inviwo.FloatVec3Property" identifier="b" />
                             <Property type="org.inviwo.FloatVec3Property" identifier="c" />
+                            <Property type="org.inviwo.BoolProperty" identifier="autoCenter" />
                             <Property type="org.inviwo.FloatVec3Property" identifier="offset" />
-                            <Property type="org.inviwo.FloatVec3Property" identifier="overrideA">
-                                <displayName content="A (override)" />
-                                <semantics semantics="Default" />
-                                <usageMode content="1" />
-                                <visible content="0" />
-                                <readonly content="0" />
-                                <minvalue x="-10" y="-10" z="-10" />
-                                <maxvalue x="10" y="10" z="10" />
-                                <increment x="0.0099999998" y="0.0099999998" z="0.0099999998" />
-                                <value x="2139" y="0" z="0" />
-                            </Property>
-                            <Property type="org.inviwo.FloatVec3Property" identifier="overrideB">
-                                <displayName content="B (override)" />
-                                <semantics semantics="Default" />
-                                <usageMode content="1" />
-                                <visible content="0" />
-                                <readonly content="0" />
-                                <minvalue x="-10" y="-10" z="-10" />
-                                <maxvalue x="10" y="10" z="10" />
-                                <increment x="0.0099999998" y="0.0099999998" z="0.0099999998" />
-                                <value x="0" y="2004" z="0" />
-                            </Property>
-                            <Property type="org.inviwo.FloatVec3Property" identifier="overrideC">
-                                <displayName content="C (override)" />
-                                <semantics semantics="Default" />
-                                <usageMode content="1" />
-                                <visible content="0" />
-                                <readonly content="0" />
-                                <minvalue x="-10" y="-10" z="-10" />
-                                <maxvalue x="10" y="10" z="10" />
-                                <increment x="0.0099999998" y="0.0099999998" z="0.0099999998" />
-                                <value x="0" y="0" z="20.184999" />
-                            </Property>
-                            <Property type="org.inviwo.FloatVec3Property" identifier="overrideOffset">
-                                <displayName content="Offset (override)" />
-                                <semantics semantics="Default" />
-                                <usageMode content="1" />
-                                <visible content="0" />
-                                <readonly content="0" />
-                                <minvalue x="-10" y="-10" z="-10" />
-                                <maxvalue x="10" y="10" z="10" />
-                                <increment x="0.0099999998" y="0.0099999998" z="0.0099999998" />
-                                <value x="-1069.5" y="-1002" z="-10.0925" />
-                            </Property>
+                            <Property type="org.inviwo.ButtonProperty" identifier="restore" />
                         </Properties>
                         <collapsed content="0" />
                     </Property>
@@ -1180,16 +1976,16 @@
                     </MetaDataItem>
                 </MetaDataMap>
             </Processor>
-            <Processor type="org.inviwo.Image.InputSelector" identifier="Image Input Selector">
+            <Processor type="org.inviwo.Image.InputSelector" identifier="Image Input Selector" displayName="Image Input Selector">
                 <PortGroups>
                     <PortGroup content="default" key="inport" />
                     <PortGroup content="default" key="outport" />
                 </PortGroups>
                 <InPorts>
-                    <InPort type="org.inviwo.ImageMultiInport" identifier="inport" id="ref33" />
+                    <InPort type="org.inviwo.Image.multi.inport" identifier="inport" id="ref7" />
                 </InPorts>
                 <OutPorts>
-                    <OutPort type="org.inviwo.ImageOutport" identifier="outport" id="ref34" />
+                    <OutPort type="org.inviwo.Image.outport" identifier="outport" id="ref8" />
                 </OutPorts>
                 <Properties>
                     <Property type="org.inviwo.OptionPropertyInt" identifier="selectedPort">
@@ -1201,37 +1997,37 @@
                         <options>
                             <option>
                                 <id content="HurricaneIsabel" />
-                                <name content="HurricaneIsabel" />
+                                <name content="Volume Slice" />
                                 <value content="0" />
                             </option>
                             <option>
                                 <id content="RandomVectorField" />
-                                <name content="RandomVectorField" />
+                                <name content="RBF Based 2D Vector Field Generator" />
                                 <value content="1" />
                             </option>
                             <option>
                                 <id content="AnalyticVectorField" />
-                                <name content="AnalyticVectorField" />
+                                <name content="Vector Field Generator 2D" />
                                 <value content="2" />
                             </option>
                         </options>
-                        <selectedIdentifier content="AnalyticVectorField" />
+                        <selectedIdentifier content="RandomVectorField" />
                     </Property>
                 </Properties>
                 <MetaDataMap>
                     <MetaDataItem type="org.inviwo.ProcessorMetaData" key="org.inviwo.ProcessorMetaData">
                         <position x="-400" y="-425" />
                         <visibility content="1" />
-                        <selection content="0" />
+                        <selection content="1" />
                     </MetaDataItem>
                 </MetaDataMap>
             </Processor>
-            <Processor type="org.inviwo.VectorFieldGenerator2D" identifier="AnalyticVectorField">
+            <Processor type="org.inviwo.VectorFieldGenerator2D" identifier="AnalyticVectorField" displayName="Vector Field Generator 2D">
                 <PortGroups>
                     <PortGroup content="default" key="outport" />
                 </PortGroups>
                 <OutPorts>
-                    <OutPort type="org.inviwo.ImageOutport" identifier="outport" id="ref35" />
+                    <OutPort type="org.inviwo.Image.outport" identifier="outport" id="ref17" />
                 </OutPorts>
                 <Properties>
                     <Property type="org.inviwo.IntVec2Property" identifier="size">
@@ -1261,104 +2057,174 @@
         </Processors>
         <Connections>
             <Connection>
-                <OutPort type="org.inviwo.MeshOutport" identifier="mesh" reference="ref14" />
-                <InPort type="org.inviwo.MeshFlatMultiInport" identifier="inputMesh" reference="ref8" />
+                <OutPort type="org.inviwo.Mesh.outport" identifier="mesh" reference="ref26" />
+                <InPort type="org.inviwo.Mesh.flat.multi.inport" identifier="inputMesh" reference="ref2" />
             </Connection>
             <Connection>
-                <OutPort type="org.inviwo.ImageOutport" identifier="outputImage" reference="ref9" />
-                <InPort type="org.inviwo.ImageInport" identifier="inport" reference="ref11" />
+                <OutPort type="org.inviwo.Image.outport" identifier="outputImage" reference="ref3" />
+                <InPort type="org.inviwo.Image.inport" identifier="inport" reference="ref0" />
             </Connection>
             <Connection>
-                <OutPort type="org.inviwo.ImageOutport" identifier="noise" reference="ref10" />
-                <InPort type="org.inviwo.ImageInport" identifier="noise" reference="ref1" />
+                <OutPort type="org.inviwo.Image.outport" identifier="noise" reference="ref23" />
+                <InPort type="org.inviwo.Image.inport" identifier="noise" reference="ref19" />
             </Connection>
             <Connection>
-                <OutPort type="org.inviwo.ImageOutport" identifier="outport" reference="ref26" />
-                <InPort type="org.inviwo.ImageInport" identifier="inport" reference="ref23" />
+                <OutPort type="org.inviwo.Image.outport" identifier="outport" reference="ref35" />
+                <InPort type="org.inviwo.Image.inport" identifier="inport" reference="ref29" />
             </Connection>
             <Connection>
-                <OutPort type="org.inviwo.ImageOutport" identifier="outport" reference="ref24" />
-                <InPort type="org.inviwo.ImageInport" identifier="inport" reference="ref21" />
+                <OutPort type="org.inviwo.Image.outport" identifier="outport" reference="ref30" />
+                <InPort type="org.inviwo.Image.inport" identifier="inport" reference="ref27" />
             </Connection>
             <Connection>
-                <OutPort type="org.inviwo.ImageOutport" identifier="outport" reference="ref19" />
-                <InPort type="org.inviwo.ImageInport" identifier="inport" reference="ref25" />
+                <OutPort type="org.inviwo.Image.outport" identifier="outport" reference="ref22" />
+                <InPort type="org.inviwo.Image.inport" identifier="inport" reference="ref34" />
             </Connection>
             <Connection>
-                <OutPort type="org.inviwo.ImageOutport" identifier="outport" reference="ref22" />
-                <InPort type="org.inviwo.ImageInport" identifier="inport" reference="ref27" />
+                <OutPort type="org.inviwo.Image.outport" identifier="outport" reference="ref28" />
+                <InPort type="org.inviwo.Image.inport" identifier="inport" reference="ref12" />
             </Connection>
             <Connection>
-                <OutPort type="org.inviwo.ImageOutport" identifier="outport" reference="ref28" />
-                <InPort type="org.inviwo.ImageInport" identifier="inport" reference="ref20" />
+                <OutPort type="org.inviwo.Image.outport" identifier="outport" reference="ref13" />
+                <InPort type="org.inviwo.Image.inport" identifier="inport" reference="ref15" />
             </Connection>
             <Connection>
-                <OutPort type="org.inviwo.ImageOutport" identifier="outport" reference="ref6" />
-                <InPort type="org.inviwo.ImageInport" identifier="inport" reference="ref7" />
+                <OutPort type="org.inviwo.Image.outport" identifier="outport" reference="ref33" />
+                <InPort type="org.inviwo.Image.inport" identifier="inport" reference="ref16" />
             </Connection>
             <Connection>
-                <OutPort type="org.inviwo.ImageOutport" identifier="outport" reference="ref12" />
-                <InPort type="org.inviwo.ImageInport" identifier="background" reference="ref4" />
+                <OutPort type="org.inviwo.Image.outport" identifier="outport" reference="ref1" />
+                <InPort type="org.inviwo.Image.inport" identifier="background" reference="ref31" />
             </Connection>
             <Connection>
-                <OutPort type="org.inviwo.VolumeOutport" identifier="data" reference="ref32" />
-                <InPort type="org.inviwo.VolumeInport" identifier="inputVolume" reference="ref30" />
+                <OutPort type="org.inviwo.Volume.outport" identifier="data" reference="ref24" />
+                <InPort type="org.inviwo.Volume.inport" identifier="inputVolume" reference="ref5" />
             </Connection>
             <Connection>
-                <OutPort type="org.inviwo.ImageOutport" identifier="outputImage" reference="ref31" />
-                <InPort type="org.inviwo.ImageMultiInport" identifier="inport" reference="ref33" />
+                <OutPort type="org.inviwo.Image.outport" identifier="outputImage" reference="ref6" />
+                <InPort type="org.inviwo.Image.multi.inport" identifier="inport" reference="ref7" />
             </Connection>
             <Connection>
-                <OutPort type="org.inviwo.ImageOutport" identifier="vectorField" reference="ref3" />
-                <InPort type="org.inviwo.ImageMultiInport" identifier="inport" reference="ref33" />
+                <OutPort type="org.inviwo.Image.outport" identifier="vectorField" reference="ref4" />
+                <InPort type="org.inviwo.Image.multi.inport" identifier="inport" reference="ref7" />
             </Connection>
             <Connection>
-                <OutPort type="org.inviwo.ImageOutport" identifier="outport" reference="ref35" />
-                <InPort type="org.inviwo.ImageMultiInport" identifier="inport" reference="ref33" />
+                <OutPort type="org.inviwo.Image.outport" identifier="outport" reference="ref17" />
+                <InPort type="org.inviwo.Image.multi.inport" identifier="inport" reference="ref7" />
             </Connection>
             <Connection>
-                <OutPort type="org.inviwo.ImageOutport" identifier="outport" reference="ref34" />
-                <InPort type="org.inviwo.ImageInport" identifier="vectorFeild" reference="ref13" />
+                <OutPort type="org.inviwo.Image.outport" identifier="outport" reference="ref8" />
+                <InPort type="org.inviwo.Image.inport" identifier="vectorFeild" reference="ref25" />
             </Connection>
             <Connection>
-                <OutPort type="org.inviwo.ImageOutport" identifier="outport" reference="ref34" />
-                <InPort type="org.inviwo.ImageInport" identifier="vf" reference="ref15" />
+                <OutPort type="org.inviwo.Image.outport" identifier="outport" reference="ref8" />
+                <InPort type="org.inviwo.Image.inport" identifier="vf" reference="ref9" />
             </Connection>
             <Connection>
-                <OutPort type="org.inviwo.ImageOutport" identifier="outport" reference="ref34" />
-                <InPort type="org.inviwo.ImageInport" identifier="vf" reference="ref0" />
+                <OutPort type="org.inviwo.Image.outport" identifier="outport" reference="ref8" />
+                <InPort type="org.inviwo.Image.inport" identifier="vf" reference="ref18" />
             </Connection>
             <Connection>
-                <OutPort type="org.inviwo.ImageOutport" identifier="outport" reference="ref34" />
-                <InPort type="org.inviwo.ImageMultiInport" identifier="multiinport" reference="ref18" />
+                <OutPort type="org.inviwo.Image.outport" identifier="outport" reference="ref8" />
+                <InPort type="org.inviwo.Image.multi.inport" identifier="multiinport" reference="ref21" />
             </Connection>
             <Connection>
-                <OutPort type="org.inviwo.ImageOutport" identifier="outport" reference="ref34" />
-                <InPort type="org.inviwo.ImageInport" identifier="vf" reference="ref5" />
+                <OutPort type="org.inviwo.Image.outport" identifier="outport" reference="ref8" />
+                <InPort type="org.inviwo.Image.inport" identifier="vf" reference="ref32" />
             </Connection>
             <Connection>
-                <OutPort type="org.inviwo.ImageOutport" identifier="outport" reference="ref12" />
-                <InPort type="org.inviwo.ImageMultiInport" identifier="multiinport" reference="ref18" />
+                <OutPort type="org.inviwo.Image.outport" identifier="outport" reference="ref1" />
+                <InPort type="org.inviwo.Image.multi.inport" identifier="multiinport" reference="ref21" />
             </Connection>
             <Connection>
-                <OutPort type="org.inviwo.ImageOutport" identifier="outport" reference="ref2" />
-                <InPort type="org.inviwo.ImageMultiInport" identifier="multiinport" reference="ref18" />
+                <OutPort type="org.inviwo.Image.outport" identifier="outport" reference="ref20" />
+                <InPort type="org.inviwo.Image.multi.inport" identifier="multiinport" reference="ref21" />
             </Connection>
             <Connection>
-                <OutPort type="org.inviwo.ImageOutport" identifier="outport" reference="ref16" />
-                <InPort type="org.inviwo.ImageMultiInport" identifier="multiinport" reference="ref18" />
+                <OutPort type="org.inviwo.Image.outport" identifier="outport" reference="ref10" />
+                <InPort type="org.inviwo.Image.multi.inport" identifier="multiinport" reference="ref21" />
             </Connection>
         </Connections>
         <PropertyLinks>
             <PropertyLink>
-                <SourceProperty type="org.inviwo.StringProperty" identifier="text" reference="ref29" />
-                <DestinationProperty type="org.inviwo.StringProperty" identifier="outputTypeStr" reference="ref17" />
+                <SourceProperty type="org.inviwo.StringProperty" identifier="text" reference="ref14" />
+                <DestinationProperty type="org.inviwo.StringProperty" identifier="outputTypeStr" reference="ref11" />
             </PropertyLink>
             <PropertyLink>
-                <SourceProperty type="org.inviwo.StringProperty" identifier="outputTypeStr" reference="ref17" />
-                <DestinationProperty type="org.inviwo.StringProperty" identifier="text" reference="ref29" />
+                <SourceProperty type="org.inviwo.StringProperty" identifier="outputTypeStr" reference="ref11" />
+                <DestinationProperty type="org.inviwo.StringProperty" identifier="text" reference="ref14" />
             </PropertyLink>
         </PropertyLinks>
     </ProcessorNetwork>
     <PortInspectors />
+    <WorkspaceAnnotations>
+        <Properties>
+            <Property type="org.inviwo.StringProperty" identifier="title" />
+            <Property type="org.inviwo.StringProperty" identifier="author" />
+            <Property type="org.inviwo.StringProperty" identifier="tags" />
+            <Property type="org.inviwo.StringProperty" identifier="categories" />
+            <Property type="org.inviwo.StringProperty" identifier="description" />
+        </Properties>
+        <Network>
+            <name content="Network" />
+            <size x="256" y="256" />
+            <base64 content="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" />
+        </Network>
+    </WorkspaceAnnotations>
+    <Animation />
+    <AnimationController>
+        <Properties>
+            <Property type="org.inviwo.CompositeProperty" identifier="PlayOptions">
+                <Properties>
+                    <Property type="org.inviwo.OptionPropertyInt" identifier="PlayFirstLastTimeOption" />
+                    <Property type="org.inviwo.DoubleMinMaxProperty" identifier="PlayFirstLastTime">
+                        <visible content="0" />
+                    </Property>
+                    <Property type="org.inviwo.DoubleProperty" identifier="PlayFramesPerSecond" />
+                    <Property type="org.inviwo.OptionPropertyEnumInt" identifier="PlayMode" />
+                </Properties>
+                <collapsed content="1" />
+            </Property>
+            <Property type="org.inviwo.CompositeProperty" identifier="RenderOptions">
+                <Properties>
+                    <Property type="org.inviwo.OptionPropertyInt" identifier="RenderFirstLastTimeOption" />
+                    <Property type="org.inviwo.DoubleMinMaxProperty" identifier="RenderFirstLastTime">
+                        <visible content="0" />
+                    </Property>
+                    <Property type="org.inviwo.OptionPropertyInt" identifier="RenderSizeOptions" />
+                    <Property type="org.inviwo.OptionPropertyInt" identifier="RenderSizeAspectRatio">
+                        <visible content="0" />
+                    </Property>
+                    <Property type="org.inviwo.IntVec2Property" identifier="RenderSize">
+                        <visible content="0" />
+                    </Property>
+                    <Property type="org.inviwo.IntProperty" identifier="RenderNumFrames" />
+                    <Property type="org.inviwo.DirectoryProperty" identifier="RenderLocationDir">
+                        <absolutePath content="" />
+                        <workspaceRelativePath content="" />
+                        <ivwdataRelativePath content="" />
+                        <selectedExtension>
+                            <extension content="*" />
+                            <description content="All Files" />
+                        </selectedExtension>
+                        <acceptMode content="0" />
+                        <fileMode content="4" />
+                    </Property>
+                    <Property type="org.inviwo.StringProperty" identifier="RenderLocationBaseName" />
+                    <Property type="org.inviwo.OptionPropertyString" identifier="RenderImageExtension" />
+                    <Property type="org.inviwo.ButtonProperty" identifier="RenderAction" />
+                    <Property type="org.inviwo.ButtonProperty" identifier="RenderActionStop">
+                        <visible content="0" />
+                    </Property>
+                </Properties>
+                <collapsed content="1" />
+            </Property>
+            <Property type="org.inviwo.CompositeProperty" identifier="ControlOptions">
+                <Properties>
+                    <Property type="org.inviwo.ButtonProperty" identifier="ControlInsertPauseFrame" />
+                </Properties>
+                <collapsed content="1" />
+            </Property>
+        </Properties>
+    </AnimationController>
 </InviwoWorkspace>
